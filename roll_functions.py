@@ -129,13 +129,22 @@ def generic_roll(df: pd.DataFrame, length: int, verbose: bool = False) -> pd.Dat
 if __name__ == "__main__":
     # sample usage
     df = pd.read_csv('Data/gold_futures_ohlcv.csv', parse_dates=['ts_event'])
-    df["ts_event"] = pd.to_datetime(df["ts_event"]).dt.tz_convert('America/Chicago') # ensure it's UTC
+    df["ts_event"] = pd.to_datetime(df["ts_event"]).dt.tz_convert('America/Chicago')
     df = df.set_index('ts_event', inplace=False)
 
-    # detailed_df = combine_features(df, True)
+    detailed_df = combine_features(df, False, 3)
 
-    # test = near_roll(detailed_df, 3, True)
-    # print(detailed_df[(detailed_df['expiry_length'] == 0) + (detailed_df['expiry_length'] == 1)].tail(20))
-    # print(test.loc[test.index[-20:], 'close':])
-    # test.plot()
-    print(df.loc["2025-07-25"])
+    for i in range(1, 13):
+        test = generic_roll(detailed_df, i, False)
+        if i == 1:
+            compare = test.copy()
+            print(test.iloc[-35:-25])
+        default = detailed_df[(detailed_df['expiry_length'] == i) | (detailed_df['expiry_length'] == i + 1)]
+        print(i)
+        if not test.empty:
+            print(test.index.nunique(), "/", default.index.nunique())
+            print(test.index[0], test.index[-1])
+            print(len(set(test.index).intersection(set(compare.index))))
+            print("*"*60)
+        else:
+            print("test is empty")
