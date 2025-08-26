@@ -89,7 +89,7 @@ def near_roll(df: pd.DataFrame, DAYS_BEFORE_EXPIRY: int = 3,verbose: bool = Fals
 
     return ndf
 
-def generic_roll(df: pd.DataFrame, length: int, verbose: bool = False) -> pd.DataFrame:
+def generic_roll(df: pd.DataFrame, length: int, verbose: bool = False, adjust: bool = True) -> pd.DataFrame:
     """
     Creates a continuous, price-adjusted futures series by rolling contracts.
     """
@@ -122,29 +122,32 @@ def generic_roll(df: pd.DataFrame, length: int, verbose: bool = False) -> pd.Dat
     total_adjustment = ndf['adjustment'].iloc[::-1].cumsum().iloc[::-1]
     
     cols_to_adjust = ['open', 'high', 'low', 'close']
-    ndf[cols_to_adjust] = ndf[cols_to_adjust].add(total_adjustment, axis=0)
+    if adjust:
+        ndf[cols_to_adjust] = ndf[cols_to_adjust].add(total_adjustment, axis=0)
 
     return ndf
 
 if __name__ == "__main__":
     # sample usage
     df = pd.read_csv('Data/gold_futures_ohlcv.csv', parse_dates=['ts_event'])
-    df["ts_event"] = pd.to_datetime(df["ts_event"]).dt.tz_convert('America/Chicago')
+    df["ts_event"] = pd.to_datetime(df["ts_event"])
     df = df.set_index('ts_event', inplace=False)
 
     detailed_df = combine_features(df, False, 3)
+    test = generic_roll(detailed_df, 1, False, True)
+    print(test.index)
 
-    for i in range(1, 13):
-        test = generic_roll(detailed_df, i, False)
-        if i == 1:
-            compare = test.copy()
-            print(test.iloc[-35:-25])
-        default = detailed_df[(detailed_df['expiry_length'] == i) | (detailed_df['expiry_length'] == i + 1)]
-        print(i)
-        if not test.empty:
-            print(test.index.nunique(), "/", default.index.nunique())
-            print(test.index[0], test.index[-1])
-            print(len(set(test.index).intersection(set(compare.index))))
-            print("*"*60)
-        else:
-            print("test is empty")
+    # for i in range(1, 13):
+    #     test = generic_roll(detailed_df, i, False)
+    #     if i == 1:
+    #         compare = test.copy()
+    #         print(test.iloc[-35:-25])
+    #     default = detailed_df[(detailed_df['expiry_length'] == i) | (detailed_df['expiry_length'] == i + 1)]
+    #     print(i)
+    #     if not test.empty:
+    #         print(test.index.nunique(), "/", default.index.nunique())
+    #         print(test.index[0], test.index[-1])
+    #         print(len(set(test.index).intersection(set(compare.index))))
+    #         print("*"*60)
+    #     else:
+    #         print("test is empty")
