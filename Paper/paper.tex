@@ -54,7 +54,7 @@
 The out of sample period is defined as starting on January 1, 2024 and is approximately 10\% of the data.
 The RMSEs are calculated in dollar terms assuming a notional investment of \$1000 in the spot gold price. 
 The weights are calculated using a constrained least squares regression that forces the weights to sum to one.
-The GLD RMSE is and \$8.23 for the out of sample period. 
+The GLD RMSE is \$6.00 for the out of sample period. 
 
 
 \begin{table}[ht]
@@ -87,6 +87,26 @@ The GLD RMSE is and \$8.23 for the out of sample period.
 \bottomrule
 \end{tabular}
 \end{table}
+
+\begin{table}[ht]
+\centering
+\caption{A summary of the regression coefficients and measures of goodness of fit for regressing one-day returns of (L)ETFs versus spot gold. We include columns for the t-statistic and p-value for testing the hypothesis that the slope equals the specified leverage ratio in each case.}
+\label{tab:my_regression_results_reordered}
+\begin{tabular}{lccccccc}
+\toprule
+\textbf{(L)ETF} & \textbf{Leverage ($\beta$)} & \textbf{Slope} & \textbf{Intercept} & \textbf{t-stat} & \textbf{p-value} & \textbf{$R^2$} & \textbf{RMSE} \\
+\midrule
+GLD & 1 & 1.00061 & $-8.8911 \times 10^{-6}$ & 0.25954 & 0.79523 & 0.97140 & 0.00185 \\
+UGL & 2 & 2.02088 & $-1.9483 \times 10^{-4}$ & 2.77734 & 0.00552 & 0.96438 & 0.00349 \\
+GLL & -2 & -2.01429 & $1.8890 \times 10^{-4}$ & -1.92313 & 0.05457 & 0.96497 & 0.00345 \\
+DGLD & -2 & -1.97565 & $-8.4896 \times 10^{-5}$ & 0.46841 & 0.63954 & 0.40656 & 0.02098 \\
+UGLDF & 3 & 3.00632 & $4.5874 \times 10^{-4}$ & 0.05822 & 0.95358 & 0.25518 & 0.04463 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The t-statistics far from zero for UGL and GLL indicate that the slopes are statistically significantly different from the specified leverage ratios.
+
 
 
 \end{document}
