@@ -51,12 +51,7 @@
 \end{tabular}
 \end{table}
 
-The out of sample period is defined as starting on January 1, 2024 and is approximately 10\% of the data.
-The RMSEs are calculated in dollar terms assuming a notional investment of \$1000 in the spot gold price. 
-The weights are calculated using a constrained least squares regression that forces the weights to sum to one.
-The GLD RMSE is \$6.00 for the out of sample period. 
-
-
+The out of sample period is defined as starting on January 1, 2024 and is approximately 10\% of the data. The RMSEs are calculated in dollar terms assuming a notional investment of \$1000 in the spot gold price. The weights are calculated using a constrained least squares regression that forces the weights to sum to one. The GLD RMSE is \$6.00 for the out of sample period.
 \begin{table}[ht]
 \centering
 \caption{A summary of the weights and in/out of sample RMSEs for portfolios of 1, 2, 3, and 4 futures contracts.}
@@ -64,26 +59,25 @@ The GLD RMSE is \$6.00 for the out of sample period.
 \setlength{\tabcolsep}{4pt} % Reduces space between columns
 \begin{tabular}{lrrrrrrr}
 \toprule
-\textbf{Portfolio} & \textbf{$w_0$} & \textbf{$w_1$} & \textbf{$w_2$} & \textbf{$w_3$} & \textbf{$w_4$} & \textbf{RMSE\textsubscript{in}} & \textbf{RMSE\textsubscript{out}} \\
+\textbf{Portfolio} & \textbf{$w_0$} & \textbf{$w_1$} & \textbf{$w_2$} & \textbf{$w_6$} & \textbf{$w_{12}$} & \textbf{RMSE\textsubscript{in}} & \textbf{RMSE\textsubscript{out}} \\
 \midrule
-1-m        & 0.00263 & 0.99735 &         &         &         & \$2.83 & \$5.13 \\
-2-m        & 0.00687 & 0.99313 &         &         &         & \$3.84 & \$5.72 \\
-6-m        & 0.02215 & 0.97785 &         &         &         & \$10.10 & \$13.41 \\
-12-m       & 0.04672 & 0.95328 &         &         &         & \$19.27 & \$22.90 \\
+1-m & 0.00285 & 0.99711 & & & & \$3.27 & \$9.18 \\
+2-m & 0.00723 & & 0.99273 & & & \$4.22 & \$10.64 \\
+12-m & 0.04846 & & & & 0.95208 & \$19.36 & \$24.98 \\
 \midrule
-1-m, 2-m  & 0.00165 & 1.23652 & -0.23817 &         &         & \$2.78 & \$5.04 \\
-1-m, 6-m  & 0.00169 & 1.04633 & -0.04804 &         &         & \$2.79 & \$4.87 \\
-1-m, 12-m & 0.00200 & 1.01343 & -0.01544 &         &         & \$2.81 & \$5.02 \\
-2-m, 6-m  & 0.00350 & 1.22553 & -0.22903 &         &         & \$3.39 & \$4.65 \\
-2-m, 12-m & 0.00342 & 1.08973 & -0.09314 &         &         & \$3.46 & \$5.13 \\
-6-m, 12-m & 0.00614 & 1.68583 & -0.69198 &         &         & \$6.64 & \$14.41 \\
+1-m, 2-m & 0.00189 & 1.22277 & -0.22470 & & & \$3.23 & \$8.91 \\
+1-m, 6-m & 0.00198 & 1.04254 & & -0.04456 & & \$3.24 & \$8.90 \\
+1-m, 12-m & 0.00234 & 1.01049 & & & -0.01286 & \$3.26 & \$9.16 \\
+2-m, 6-m & 0.00367 & & 1.22476 & -0.22854 & & \$3.81 & \$9.41 \\
+2-m, 12-m & 0.00390 & & 1.08780 & & -0.09172 & \$3.87 & \$10.60 \\
+6-m, 12-m & 0.00919 & & & 1.66574 & -0.67435 & \$7.00 & \$23.51 \\
 \midrule
-1-m, 2-m, 6-m  & 0.00156 & 1.20157 & -0.18857  & -0.01457 &         & \$2.78 & \$4.98 \\
-1-m, 2-m, 12-m & 0.00174 & 1.27744 & -0.28654  & 0.00734 &         & \$2.78 & \$5.08 \\
-1-m, 6-m, 12-m & 0.00204 & 1.10142 & -0.16131  & 0.05785 &         & \$2.76 & \$4.80 \\
-2-m, 6-m, 12-m & 0.00349 & 1.22294 & -0.22414  & -0.00229 &         & \$3.39 & \$4.65 \\
+1-m, 2-m, 6-m & 0.00184 & 1.20060 & -0.19291 & -0.00956 & & \$3.23 & \$8.88 \\
+1-m, 2-m, 12-m & 0.00204 & 1.28345 & -0.29678 & & 0.01126 & \$3.22 & \$8.84 \\
+1-m, 6-m, 12-m & 0.00210 & 1.10380 & & -0.17056 & 0.06457 & \$3.21 & \$8.31 \\
+2-m, 6-m, 12-m & 0.00369 & & 1.22868 & -0.23595 & 0.00348 & \$3.81 & \$9.37 \\
 \midrule
-1-m, 2-m, 6-m, 12-m & 0.00189 & 1.24562 & -0.17704 & -0.12664 & 0.05617 & \$2.75 & \$4.88 \\
+1-m, 2-m, 6-m, 12-m & 0.00196 & 1.24924 & -0.17947 & -0.13469 & 0.06287 & \$3.20 & \$8.30 \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -105,8 +99,37 @@ UGLDF & 3 & 3.00632 & $4.5874 \times 10^{-4}$ & 0.05822 & 0.95358 & 0.25518 & 0.
 \end{tabular}
 \end{table}
 
-The t-statistics far from zero for UGL and GLL indicate that the slopes are statistically significantly different from the specified leverage ratios.
+\begin{table}[ht]
+\centering
+\caption{A summary of the weights and in/out of sample RMSEs for portfolios replicating leveraged benchmarks.}
+\label{tab:leveraged_replication}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{llrrrrrrr}
+\toprule
+\textbf{Benchmark} & \textbf{Portfolio} & \textbf{$w_0$} & \textbf{$w_1$} & \textbf{$w_2$} & \textbf{$w_6$} & \textbf{$w_{12}$} & \textbf{RMSE\textsubscript{in}} & \textbf{RMSE\textsubscript{out}} \\
+\midrule
+\multirow{6}{*}{2x Leveraged} 
+ & 1-m & -1.62098 & 2.62436 & & & & \$58.87 & \$331.76 \\
+ & 2-m & -1.61086 & & 2.61411 & & & \$56.14 & \$336.05 \\
+ & 6-m & -1.56497 & & & 2.56792 & & \$45.85 & \$357.43 \\
+ & 12-m & -1.49557 & & & & 2.49767 & \$46.46 & \$375.93 \\
+ \cmidrule{2-9}
+ & 1-m, 2-m & -1.56365 & -10.84072 & 13.40753 & & & \$50.70 & \$353.93 \\
+ & 1-m, 6-m & -1.54357 & -1.39403 & & 3.94189 & & \$45.17 & \$365.64 \\
+\midrule
+\multirow{6}{*}{3x Leveraged} 
+ & 1-m & -4.03105 & 5.03349 & & & & \$188.10 & \$1036.37 \\
+ & 2-m & -4.01308 & & 5.01515 & & & \$183.04 & \$1042.61 \\
+ & 6-m & -3.92928 & & & 4.92945 & & \$161.06 & \$1076.52 \\
+ & 12-m & -3.79391 & & & & 4.79256 & \$147.85 & \$1116.16 \\
+ \cmidrule{2-9}
+ & 1-m, 2-m & -3.85870 & -35.37062 & 40.23119 & & & \$165.26 & \$1085.79 \\
+ & 1-m, 6-m & -3.79649 & -7.19724 & & 11.99866 & & \$149.02 & \$1111.73 \\
+\bottomrule
+\end{tabular}
+\end{table}
 
+The t-statistics far from zero for UGL and GLL indicate that the slopes are statistically significantly different from the specified leverage ratios.
 
 
 \end{document}
