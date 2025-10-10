@@ -21,16 +21,17 @@
 \toprule
 \textbf{Maturity} & \textbf{Slope} & \textbf{Intercept} & \textbf{$R^2$} & \textbf{RMSE} \\
 \midrule
-1-Month   & 0.98218 & $-9.0480 \times 10^{-5}$ & 0.92459 & 0.00269 \\
-2-Month   & 0.98709 & $-1.2547 \times 10^{-4}$ & 0.92244 & 0.00275 \\
-6-Month   & 0.98870 & $-9.0354 \times 10^{-5}$ & 0.91718 & 0.00285 \\
-12-Month  & 0.92794 & $9.3489 \times 10^{-5}$  & 0.76020 & 0.00520 \\
+1-Month   & 0.9973 & --- & 0.9461 & --- \\
+2-Month   & 1.0001 & --- & 0.9439 & --- \\
+6-Month   & 1.0042 & --- & 0.9369 & --- \\
+12-Month  & 0.9462 & --- & 0.8286 & --- \\
 \bottomrule
 \end{tabular}
 \end{table}
 
 \textit{
-Slopes are very close to 1, apart from the 12-month contract.
+Slopes are 
+very close to 1, apart from the 12-month contract.
 This may be a result of the lower liquidity of the longer contract
 and the smaller impact of daily gold price movements on longer-dated futures.
 }
@@ -52,7 +53,7 @@ and the smaller impact of daily gold price movements on longer-dated futures.
 \end{table}
 
 \textit{
-The slopes are also very close to 1, but consistently lower than the newer data. 
+The slopes are also very close to 1, but consistently lower than the newer data.
 The $R^2$ values are also significantly lower than the newer data.
 This may be due to the smaller sample size of the older data and lower liquidity.
 }
@@ -66,16 +67,17 @@ This may be due to the smaller sample size of the older data and lower liquidity
 & \textbf{Days} & \textbf{1-Month} & \textbf{2-Month} & \textbf{6-Month} & \textbf{12-Month} \\
 \midrule
 \multirow{4}{*}{\textbf{Slope}} 
- & 1  & 0.96061 & 0.96608 & 0.96757 & 0.91176 \\
- & 5  & 0.99723 & 1.00073 & 0.99971 & 0.94958 \\
- & 10 & 0.99556 & 0.99782 & 0.99821 & 0.97219 \\
- & 15 & 0.99821 & 1.00003 & 0.99906 & 0.98087 \\
+ & 1  & 0.99730 & 1.00010 & 1.00420 & 0.94620 \\
+ & 5  & 1.01040 & 1.01320 & 1.01250 & 0.98780 \\
+ & 10 & 1.00320 & 1.00600 & 1.00390 & 0.98840 \\
+ & 15 & 1.00370 & 1.00500 & 1.00340 & 0.99220 \\
 \midrule
 \multirow{4}{*}{\textbf{$R^2$}}   
- & 1  & 0.87699 & 0.87470 & 0.87272 & 0.73603 \\
- & 5  & 0.96413 & 0.96345 & 0.96008 & 0.87631 \\
- & 10 & 0.98020 & 0.97931 & 0.97586 & 0.93513 \\
- & 15 & 0.98603 & 0.98532 & 0.98191 & 0.95316 \\
+ & 1  & 0.94610 & 0.94390 & 0.93690 & 0.82860 \\
+ & 5  & 0.98080 & 0.98100 & 0.97820 & 
+0.95350 \\
+ & 10 & 0.99020 & 0.98960 & 0.98630 & 0.97370 \\
+ & 15 & 0.99310 & 0.99240 & 0.98940 & 0.97930 \\
 \bottomrule
 \end{tabular}
 
@@ -97,7 +99,8 @@ This may be due to the smaller sample size of the older data and lower liquidity
 \multirow{4}{*}{\textbf{Slope}} 
  & 1  & 0.94314 & 0.94301 & 0.94348 & 0.94358 \\
  & 5  & 0.99805 & 0.99752 & 0.99757 & 0.99715 \\
- & 10 & 1.01075 & 1.01020 & 1.00970 & 1.00841 \\
+ & 10 & 1.01075 & 1.01020 & 
+1.00970 & 1.00841 \\
  & 15 & 0.99448 & 0.99461 & 0.99431 & 0.99345 \\
 \midrule
 \multirow{4}{*}{\textbf{$R^2$}}   
@@ -116,7 +119,6 @@ The out of sample period is defined as starting on January 1, 2024 and is approx
 The RMSEs are calculated in dollar terms assuming a notional investment of \$1000 in the spot gold price.
 The weights are calculated using a constrained least squares regression that forces the weights to sum to one.
 The GLD RMSE is \$6.00 for the out of sample period.
-
 \begin{table}[ht]
 \centering
 \caption{New Data: Weights and in/out of sample RMSEs for portfolios of 1, 2, 3, and 4 futures contracts.}
@@ -126,28 +128,32 @@ The GLD RMSE is \$6.00 for the out of sample period.
 \toprule
 \textbf{Portfolio} & \textbf{$w_0$} & \textbf{$w_1$} & \textbf{$w_2$} & \textbf{$w_6$} & \textbf{$w_{12}$} & \textbf{RMSE\textsubscript{in}} & \textbf{RMSE\textsubscript{out}} \\
 \midrule
-1-m & 0.00285 & 0.99711 & & & & \$3.27 & \$9.18 \\
-2-m & 0.00723 & & 0.99273 & & & \$4.22 & \$10.64 \\
-12-m & 0.04846 & & & & 0.95208 & \$19.36 & \$24.98 \\
+1-m & 0.00256 & 0.99743 & & & & \$2.65 & \$5.15 \\
+2-m & 0.00676 & & 0.99324 & & & \$3.67 & \$5.75 \\
+12-m & 0.04509 & & & & 0.95491 & \$18.84 & \$17.95 \\
 \midrule
-1-m, 2-m & 0.00189 & 1.22277 & -0.22470 & & & \$3.23 & \$8.91 \\
-1-m, 6-m & 0.00198 & 1.04254 & & -0.04456 & & \$3.24 & \$8.90 \\
-1-m, 12-m & 0.00234 & 1.01049 & & & -0.01286 & \$3.26 & \$9.16 \\
-2-m, 6-m & 0.00367 & & 1.22476 & -0.22854 & & \$3.81 & \$9.41 \\
-2-m, 12-m & 0.00390 & & 1.08780 & & -0.09172 & \$3.87 & \$10.60 \\
-6-m, 12-m & 0.00919 & & & 1.66574 & -0.67435 & \$7.00 & \$23.51 \\
+1-m, 2-m & 0.00168 & 1.21224 & -0.21393 & & & \$2.61 & \$5.06 \\
+1-m, 6-m & 0.00165 & 1.04753 & & -0.04918 & & \$2.61 & 
+\$4.88 \\
+1-m, 12-m & 0.00189 & 1.01446 & & & -0.01635 & \$2.66 & \$4.95 \\
+2-m, 6-m & 0.00330 & & 1.23075 & -0.23405 & & \$3.18 & \$4.63 \\
+2-m, 12-m & 0.00310 & & 1.09461 & & -0.09770 & \$3.26 & \$4.99 \\
+6-m, 12-m & 0.00446 & & & 1.76090 & -0.76537 & \$6.07 & \$12.15 \\
 \midrule
-1-m, 2-m, 6-m & 0.00184 & 1.20060 & -0.19291 & -0.00956 & & \$3.23 & \$8.88 \\
-1-m, 2-m, 12-m & 0.00204 & 1.28345 & -0.29678 & & 0.01126 & \$3.22 & \$8.84 \\
-1-m, 6-m, 12-m & 0.00210 & 1.10380 & & -0.17056 & 0.06457 & \$3.21 & \$8.31 \\
-2-m, 6-m, 12-m & 0.00369 & & 1.22868 & -0.23595 & 0.00348 & \$3.81 & \$9.37 \\
+1-m, 2-m, 6-m & 0.00156 & 1.14088 & -0.11333 & -0.02911 & & \$2.60 & \$4.94 \\
+1-m, 2-m, 12-m & 0.00170 & 1.23840 & -0.24373 & & 0.00363 & \$2.64 & \$4.99 \\
+1-m, 6-m, 12-m & 0.00197 & 1.10522 & & -0.17107 & 
+0.06388 & \$2.62 & \$4.54 \\
+2-m, 6-m, 12-m & 0.00327 & & 1.22084 & -0.21809 & -0.00602 & \$3.21 & \$4.46 \\
 \midrule
-1-m, 2-m, 6-m, 12-m & 0.00196 & 1.24924 & -0.17947 & -0.13469 & 0.06287 & \$3.20 & \$8.30 \\
+1-m, 2-m, 6-m, 12-m & 0.00186 & 1.21485 & -0.13541 & -0.14322 & 0.06191 & \$2.62 & \$4.62 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\textit{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.}
+\textit{Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam.
+Maecenas ligula massa, varius a, semper congue, euismod non, mi.}
 
 \begin{table}[ht]
 \centering
@@ -163,13 +169,16 @@ The GLD RMSE is \$6.00 for the out of sample period.
 \midrule
 1-m, 2-m & -0.00088 & 1.27315 & -0.27227 & \$6.27 & \$2.79 \\
 1-m, 6-m & -0.00171 & 1.23899 & -0.23729 & \$6.27 & \$2.98 \\
-1-m, 12-m & -0.00021 & 1.19336 & -0.19315 & \$6.29 & \$3.00 \\
+1-m, 12-m & -0.00021 & 1.19336 & -0.19315 
+& \$6.29 & \$3.00 \\
 2-m, 6-m & -0.04079 & 5.06602 & -4.02523 & \$10.27 & \$9.37 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\textit{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.}
+\textit{Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam.
+Maecenas ligula massa, varius a, semper congue, euismod non, mi.}
 
 \clearpage
 
@@ -183,33 +192,38 @@ The GLD RMSE is \$6.00 for the out of sample period.
 \midrule
 GLD & 1 & 1.00061 & $-8.8911 \times 10^{-6}$ & 0.25954 & 0.79523 & 0.97140 & 0.00185 \\
 UGL & 2 & 2.02088 & $-1.9483 \times 10^{-4}$ & 2.77734 & 0.00552 & 0.96438 & 0.00349 \\
-GLL & -2 & -2.01429 & $1.8890 \times 10^{-4}$ & -1.92313 & 0.05457 & 0.96497 & 0.00345 \\
+GLL & -2 & -2.01429 & \quad $1.8890 \times 10^{-4}$ & -1.92313 & 0.05457 & 0.96497 & 0.00345 \\
 DGLD & -2 & -1.97565 & $-8.4896 \times 10^{-5}$ & 0.46841 & 0.63954 & 0.40656 & 0.02098 \\
-UGLDF & 3 & 3.00632 & $4.5874 \times 10^{-4}$ & 0.05822 & 0.95358 & 0.25518 & 0.04463 \\
+UGLDF & 3 & 3.00632 & \quad $4.5874 \times 10^{-4}$ & 0.05822 & 0.95358 & 0.25518 & 0.04463 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\textit{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.}
+\textit{Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam.
+Maecenas ligula massa, varius a, semper congue, euismod non, mi.}
 
 \begin{table}[ht]
 \centering
 \caption{Leung \& Ward (2015) Data: Regression coefficients for one-day returns of (L)ETFs versus spot gold.}
 \label{tab:my_regression_results_reordered_lw}
-\begin{tabular}{lcccccc}
+\begin{tabular}{lccccccc}
 \toprule
-\textbf{(L)ETF} & \textbf{Slope} & \textbf{Intercept} & \textbf{t-stat} & \textbf{p-value} & \textbf{$R^2$} & \textbf{RMSE} \\
+\textbf{(L)ETF} & \textbf{Leverage ($\beta$)}  & \textbf{Slope} & \textbf{Intercept} & \textbf{t-stat} & \textbf{p-value} & \textbf{$R^2$} & \textbf{RMSE} \\
 \midrule
-GLD & 1.00540 & $-1.6427 \times 10^{-6}$ & 1.42692 & 0.15382 & 0.98060 & 0.00163 \\
-UGL & 2.00572 & $-1.3107 \times 10^{-4}$ & 0.73319 & 0.46357 & 0.97930 & 0.00337 \\
-GLL & -2.00556 & $-1.0550 \times 10^{-4}$ & 0.67089 & 0.50240 & 0.97673 & 0.00358 \\
-UGLD & 2.99358 & $-1.9860 \times 10^{-4}$ & 0.45211 & 0.65133 & 0.98484 & 0.00421 \\
-DGLD & -2.97528 & $-1.6912 \times 10^{-5}$ & 0.97442 & 0.33019 & 0.95256 & 0.00752 \\
+GLD & 1 & 1.00540 & $-1.6427 \times 10^{-6}$ & 1.42692 & 0.15382 & 0.98060 & 0.00163 \\
+UGL & 2 &  2.00572 & $-1.3107 \times 10^{-4}$ & 0.73319 & 0.46357 & 0.97930 & 0.00337 \\
+GLL & -2 & -2.00556 & $-1.0550 \times 10^{-4}$ & 0.67089 & 0.50240 & 0.97673 & 0.00358 \\
+UGLD & 3 & 2.99358 & $-1.9860 \times 10^{-4}$ & 0.45211 & 0.65133 & 0.98484 & 0.00421 \\
+DGLD & -3 & -2.97528 & 
+$-1.6912 \times 10^{-5}$ & 0.97442 & 0.33019 & 0.95256 & 0.00752 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\textit{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.}
+\textit{Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam.
+Maecenas ligula massa, varius a, semper congue, euismod non, mi.}
 
 \begin{table}[ht]
 \centering
@@ -221,27 +235,31 @@ DGLD & -2.97528 & $-1.6912 \times 10^{-5}$ & 0.97442 & 0.33019 & 0.95256 & 0.007
 \textbf{Benchmark} & \textbf{Portfolio} & \textbf{$w_0$} & \textbf{$w_1$} & \textbf{$w_2$} & \textbf{$w_6$} & \textbf{$w_{12}$} & \textbf{RMSE\textsubscript{in}} & \textbf{RMSE\textsubscript{out}} \\
 \midrule
 \multirow{6}{*}{2x Leveraged} 
- & 1-m & -1.62098 & 2.62436 & & & & \$58.87 & \$331.76 \\
- & 2-m & -1.61086 & & 2.61411 & & & \$56.14 & \$336.05 \\
- & 6-m & -1.56497 & & & 2.56792 & & \$45.85 & \$357.43 \\
- & 12-m & -1.49557 & & & & 2.49767 & \$46.46 & \$375.93 \\
+ & 1-m & -1.63329 & 2.63329 & & & & \$59.08 & \$330.19 \\
+ & 2-m & -1.62266 & & 2.62266 & & & \$56.34 & \$334.55 \\
+ & 6-m & -1.57547 & & & 2.57547 & & \$46.04 & \$356.16 \\
+ & 12-m & -1.50287 & & & & 2.50287 & \$46.58 & \$375.04 \\
  \cmidrule{2-9}
- & 1-m, 2-m & -1.56365 & -10.84072 & 13.40753 & & & \$50.70 & \$353.93 \\
- & 1-m, 6-m & -1.54357 & -1.39403 & & 3.94189 & & \$45.17 & \$365.64 \\
+ & 1-m, 
+2-m & -1.57511 & -10.84619 & 13.42130 & & & \$50.91 & \$352.51 \\
+ & 1-m, 6-m & -1.55949 & -1.36860 & & 3.92809 & & \$45.60 & \$363.58 \\
 \midrule
 \multirow{6}{*}{3x Leveraged} 
- & 1-m & -4.03105 & 5.03349 & & & & \$188.10 & \$1036.37 \\
- & 2-m & -4.01308 & & 5.01515 & & & \$183.04 & \$1042.61 \\
- & 6-m & -3.92928 & & & 4.92945 & & \$161.06 & \$1076.52 \\
- & 12-m & -3.79391 & & & & 4.79256 & \$147.85 & \$1116.16 \\
+ & 1-m & -4.03993 & 5.03993 & & & & \$188.14 & \$1035.66 \\
+ & 2-m & -4.02060 & & 5.02060 & & & \$183.07 & \$1042.01 \\
+ & 6-m & -3.92928 & & & 4.92928 & & \$161.06 & \$1076.52 \\
+ & 12-m & -3.78922 & & & & 4.78922 & \$147.86 & \$1116.50 \\
  \cmidrule{2-9}
- & 1-m, 2-m & -3.85870 & -35.37062 & 40.23119 & & & \$165.26 & \$1085.79 \\
- & 1-m, 6-m & -3.79649 & -7.19724 & & 11.99866 & & \$149.02 & \$1111.73 \\
+ & 1-m, 2-m & -3.86549 & -35.37385 & 40.23934 & & 
+& \$165.29 & \$1085.27 \\
+ & 1-m, 6-m & -3.81478 & -7.16800 & & 11.98279 & & \$149.22 & \$1110.26 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\textit{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.}
+\textit{Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam.
+Maecenas ligula massa, varius a, semper congue, euismod non, mi.}
 
 \begin{table}[ht]
 \centering
@@ -266,9 +284,10 @@ DGLD & -2.97528 & $-1.6912 \times 10^{-5}$ & 0.97442 & 0.33019 & 0.95256 & 0.007
 \end{tabular}
 \end{table}
 
-\textit{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.}
+\textit{Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam.
+Maecenas ligula massa, varius a, semper congue, euismod non, mi.}
 
 \vspace{5mm}
 The t-statistics far from zero for UGL and GLL indicate that the slopes are statistically significantly different from the specified leverage ratios.
-
 \end{document}
