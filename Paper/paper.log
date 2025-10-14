@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.31)  11 OCT 2025 19:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.31)  13 OCT 2025 21:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -228,15 +228,11 @@ Overfull \hbox (98.30322pt too wide) in paragraph at lines 207--230
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
  2274 strings out of 474662
  34381 string characters out of 5753850
- 441696 words of memory out of 5000000
+ 441767 words of memory out of 5000000
  25305 multiletter control sequences out of 15000+600000
  567156 words of font info for 68 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
