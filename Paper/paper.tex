@@ -21,20 +21,16 @@
 \toprule
 \textbf{Maturity} & \textbf{Slope} & \textbf{Intercept} & \textbf{$R^2$} & \textbf{RMSE} \\
 \midrule
-1-Month   & 0.9973 & --- & 0.9461 & --- \\
-2-Month   & 1.0001 & --- & 0.9439 & --- \\
-6-Month   & 1.0042 & --- & 0.9369 & --- \\
-12-Month  & 0.9462 & --- & 0.8286 & --- \\
+1-Month   & 0.9996 & --- & 0.9494 & --- \\
+2-Month   & 1.0024 & --- & 0.9471 & --- \\
+6-Month   & 1.0032 & --- & 0.9407 & --- \\
+12-Month  & 0.9478 & --- & 0.8399 & --- \\
 \bottomrule
 \end{tabular}
 \end{table}
 
 \textit{
-Slopes are 
-very close to 1, apart from the 12-month contract.
-This may be a result of the lower liquidity of the longer contract
-and the smaller impact of daily gold price movements on longer-dated futures.
-}
+The slopes for the 1, 2, and 6-month contracts are all very close to 1, indicating a strong correlation with spot gold returns. The 12-month contract, however, has a noticeably lower slope of 0.9478 and a significantly lower $R^2$ of 0.8399. This may be a result of the lower liquidity and trading volume of the longer-dated contract, making it less sensitive to daily spot price movements.}
 
 \begin{table}[ht]
 \centering
@@ -53,10 +49,7 @@ and the smaller impact of daily gold price movements on longer-dated futures.
 \end{table}
 
 \textit{
-The slopes are also very close to 1, but consistently lower than the newer data.
-The $R^2$ values are also significantly lower than the newer data.
-This may be due to the smaller sample size of the older data and lower liquidity.
-}
+The slopes are also very close to 1, but consistently lower than the newer data. The $R^2$ values are also significantly lower than the newer data. This may be due to the smaller sample size of the older data and lower liquidity.}
 
 \begin{table}[ht]
 \centering
@@ -67,17 +60,16 @@ This may be due to the smaller sample size of the older data and lower liquidity
 & \textbf{Days} & \textbf{1-Month} & \textbf{2-Month} & \textbf{6-Month} & \textbf{12-Month} \\
 \midrule
 \multirow{4}{*}{\textbf{Slope}} 
- & 1  & 0.99730 & 1.00010 & 1.00420 & 0.94620 \\
- & 5  & 1.01040 & 1.01320 & 1.01250 & 0.98780 \\
- & 10 & 1.00320 & 1.00600 & 1.00390 & 0.98840 \\
- & 15 & 1.00370 & 1.00500 & 1.00340 & 0.99220 \\
+ & 1  & 0.9996 & 1.0024 & 1.0032 & 0.9478 \\
+ & 5  & 1.0074 & 1.0102 & 1.0106 & 0.9875 \\
+ & 10 & 1.0022 & 1.0040 & 1.0034 & 0.9897 \\
+ & 15 & 1.0031 & 1.0049 & 1.0033 & 0.9920 \\
 \midrule
 \multirow{4}{*}{\textbf{$R^2$}}   
- & 1  & 0.94610 & 0.94390 & 0.93690 & 0.82860 \\
- & 5  & 0.98080 & 0.98100 & 0.97820 & 
-0.95350 \\
- & 10 & 0.99020 & 0.98960 & 0.98630 & 0.97370 \\
- & 15 & 0.99310 & 0.99240 & 0.98940 & 0.97930 \\
+ & 1  & 0.9494 & 0.9471 & 0.9407 & 0.8399 \\
+ & 5  & 0.9842 & 0.9840 & 0.9812 & 0.9567 \\
+ & 10 & 0.9915 & 0.9910 & 0.9878 & 0.9747 \\
+ & 15 & 0.9939 & 0.9933 & 0.9899 & 0.9807 \\
 \bottomrule
 \end{tabular}
 
@@ -85,8 +77,6 @@ This may be due to the smaller sample size of the older data and lower liquidity
 \textit{The slopes and $R^2$ values generally increase with longer holding periods but decrease with longer-dated contracts.}
 
 \end{table}
-
-\textit{a}
 
 \begin{table}[ht]
 \centering
@@ -99,8 +89,7 @@ This may be due to the smaller sample size of the older data and lower liquidity
 \multirow{4}{*}{\textbf{Slope}} 
  & 1  & 0.94314 & 0.94301 & 0.94348 & 0.94358 \\
  & 5  & 0.99805 & 0.99752 & 0.99757 & 0.99715 \\
- & 10 & 1.01075 & 1.01020 & 
-1.00970 & 1.00841 \\
+ & 10 & 1.01075 & 1.01020 & 1.00970 & 1.00841 \\
  & 15 & 0.99448 & 0.99461 & 0.99431 & 0.99345 \\
 \midrule
 \multirow{4}{*}{\textbf{$R^2$}}   
@@ -112,13 +101,8 @@ This may be due to the smaller sample size of the older data and lower liquidity
 \end{tabular}
 \end{table}
 
-%\textit{k}
-
 \clearpage
-The out of sample period is defined as starting on January 1, 2024 and is approximately 10\% of the data.
-The RMSEs are calculated in dollar terms assuming a notional investment of \$1000 in the spot gold price.
-The weights are calculated using a constrained least squares regression that forces the weights to sum to one.
-The GLD RMSE is \$6.00 for the out of sample period.
+The out of sample period is defined as starting on January 1, 2024 and is approximately 10\% of the data. The RMSEs are calculated in dollar terms assuming a notional investment of \$1000 in the spot gold price. The weights are calculated using a constrained least squares regression that forces the weights to sum to one. The GLD RMSE is \$6.00 for the out of sample period.
 \begin{table}[ht]
 \centering
 \caption{New Data: Weights and in/out of sample RMSEs for portfolios of 1, 2, 3, and 4 futures contracts.}
@@ -133,8 +117,7 @@ The GLD RMSE is \$6.00 for the out of sample period.
 12-m & 0.04509 & & & & 0.95491 & \$18.84 & \$17.95 \\
 \midrule
 1-m, 2-m & 0.00168 & 1.21224 & -0.21393 & & & \$2.61 & \$5.06 \\
-1-m, 6-m & 0.00165 & 1.04753 & & -0.04918 & & \$2.61 & 
-\$4.88 \\
+1-m, 6-m & 0.00165 & 1.04753 & & -0.04918 & & \$2.61 & \$4.88 \\
 1-m, 12-m & 0.00189 & 1.01446 & & & -0.01635 & \$2.66 & \$4.95 \\
 2-m, 6-m & 0.00330 & & 1.23075 & -0.23405 & & \$3.18 & \$4.63 \\
 2-m, 12-m & 0.00310 & & 1.09461 & & -0.09770 & \$3.26 & \$4.99 \\
@@ -142,8 +125,7 @@ The GLD RMSE is \$6.00 for the out of sample period.
 \midrule
 1-m, 2-m, 6-m & 0.00156 & 1.14088 & -0.11333 & -0.02911 & & \$2.60 & \$4.94 \\
 1-m, 2-m, 12-m & 0.00170 & 1.23840 & -0.24373 & & 0.00363 & \$2.64 & \$4.99 \\
-1-m, 6-m, 12-m & 0.00197 & 1.10522 & & -0.17107 & 
-0.06388 & \$2.62 & \$4.54 \\
+1-m, 6-m, 12-m & 0.00197 & 1.10522 & & -0.17107 & 0.06388 & \$2.62 & \$4.54 \\
 2-m, 6-m, 12-m & 0.00327 & & 1.22084 & -0.21809 & -0.00602 & \$3.21 & \$4.46 \\
 \midrule
 1-m, 2-m, 6-m, 12-m & 0.00186 & 1.21485 & -0.13541 & -0.14322 & 0.06191 & \$2.62 & \$4.62 \\
@@ -151,9 +133,8 @@ The GLD RMSE is \$6.00 for the out of sample period.
 \end{tabular}
 \end{table}
 
-\textit{Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam.
-Maecenas ligula massa, varius a, semper congue, euismod non, mi.}
+\textit{
+The results show that using a single futures contract provides a reasonable replication, but performance diminishes as the maturity of the contract increases (out-of-sample RMSE rises from \$5.15 to \$17.95). Adding a second futures contract generally improves the out-of-sample RMSE, with the 2-month and 6-month combination performing best at \$4.63. The best-performing portfolio overall is the three-contract combination of 2-month, 6-month, and 12-month futures, which achieved an out-of-sample RMSE of \$4.46. Notably, several of these futures portfolios outperform the GLD ETF, which has an out-of-sample RMSE of \$6.00 over the same period.}
 
 \begin{table}[ht]
 \centering
@@ -169,16 +150,13 @@ Maecenas ligula massa, varius a, semper congue, euismod non, mi.}
 \midrule
 1-m, 2-m & -0.00088 & 1.27315 & -0.27227 & \$6.27 & \$2.79 \\
 1-m, 6-m & -0.00171 & 1.23899 & -0.23729 & \$6.27 & \$2.98 \\
-1-m, 12-m & -0.00021 & 1.19336 & -0.19315 
-& \$6.29 & \$3.00 \\
+1-m, 12-m & -0.00021 & 1.19336 & -0.19315 & \$6.29 & \$3.00 \\
 2-m, 6-m & -0.04079 & 5.06602 & -4.02523 & \$10.27 & \$9.37 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\textit{Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam.
-Maecenas ligula massa, varius a, semper congue, euismod non, mi.}
+\textit{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.}
 
 \clearpage
 
@@ -190,18 +168,17 @@ Maecenas ligula massa, varius a, semper congue, euismod non, mi.}
 \toprule
 \textbf{(L)ETF} & \textbf{Leverage ($\beta$)} & \textbf{Slope} & \textbf{Intercept} & \textbf{t-stat} & \textbf{p-value} & \textbf{$R^2$} & \textbf{RMSE} \\
 \midrule
-GLD & 1 & 1.00061 & $-8.8911 \times 10^{-6}$ & 0.25954 & 0.79523 & 0.97140 & 0.00185 \\
-UGL & 2 & 2.02088 & $-1.9483 \times 10^{-4}$ & 2.77734 & 0.00552 & 0.96438 & 0.00349 \\
-GLL & -2 & -2.01429 & \quad $1.8890 \times 10^{-4}$ & -1.92313 & 0.05457 & 0.96497 & 0.00345 \\
-DGLD & -2 & -1.97565 & $-8.4896 \times 10^{-5}$ & 0.46841 & 0.63954 & 0.40656 & 0.02098 \\
-UGLDF & 3 & 3.00632 & \quad $4.5874 \times 10^{-4}$ & 0.05822 & 0.95358 & 0.25518 & 0.04463 \\
+GLD & 1 & 1.0006 & -8.89e-06 & 0.2595 & 0.7952 & 0.9714 & 0.00185 \\
+UGL & 2 & 2.0209 & -1.95e-04 & 2.7773 & 0.0055 & 0.9644 & 0.00349 \\
+GLL & -2 & -2.0143 & 1.89e-04 & -1.9231 & 0.0546 & 0.9650 & 0.00345 \\
+DGLD & -2 & -1.9756 & -8.49e-05 & 0.4684 & 0.6395 & 0.4066 & 0.02098 \\
+UGLDF & 3 & 3.0063 & 4.59e-04 & 0.0582 & 0.9536 & 0.2552 & 0.04463 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\textit{Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam.
-Maecenas ligula massa, varius a, semper congue, euismod non, mi.}
+\textit{
+The regression results indicate that GLD, UGL, and GLL are effective at tracking their underlying benchmarks, with high $R^2$ values and slopes very close to their target betas. The p-value for GLD (0.7952) shows its slope is not statistically different from 1. However, the p-values for UGL (0.0055) and GLL (0.0546) suggest their slopes are statistically different from their target betas of 2 and -2, respectively. DGLD and UGLDF perform poorly, with very low $R^2$ values (0.4066 and 0.2552), indicating they do not reliably track their leveraged benchmarks.}
 
 \begin{table}[ht]
 \centering
@@ -215,15 +192,12 @@ GLD & 1 & 1.00540 & $-1.6427 \times 10^{-6}$ & 1.42692 & 0.15382 & 0.98060 & 0.0
 UGL & 2 &  2.00572 & $-1.3107 \times 10^{-4}$ & 0.73319 & 0.46357 & 0.97930 & 0.00337 \\
 GLL & -2 & -2.00556 & $-1.0550 \times 10^{-4}$ & 0.67089 & 0.50240 & 0.97673 & 0.00358 \\
 UGLD & 3 & 2.99358 & $-1.9860 \times 10^{-4}$ & 0.45211 & 0.65133 & 0.98484 & 0.00421 \\
-DGLD & -3 & -2.97528 & 
-$-1.6912 \times 10^{-5}$ & 0.97442 & 0.33019 & 0.95256 & 0.00752 \\
+DGLD & -3 & -2.97528 & $-1.6912 \times 10^{-5}$ & 0.97442 & 0.33019 & 0.95256 & 0.00752 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\textit{Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam.
-Maecenas ligula massa, varius a, semper congue, euismod non, mi.}
+\textit{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.}
 
 \begin{table}[ht]
 \centering
@@ -235,31 +209,28 @@ Maecenas ligula massa, varius a, semper congue, euismod non, mi.}
 \textbf{Benchmark} & \textbf{Portfolio} & \textbf{$w_0$} & \textbf{$w_1$} & \textbf{$w_2$} & \textbf{$w_6$} & \textbf{$w_{12}$} & \textbf{RMSE\textsubscript{in}} & \textbf{RMSE\textsubscript{out}} \\
 \midrule
 \multirow{6}{*}{2x Leveraged} 
- & 1-m & -1.63329 & 2.63329 & & & & \$59.08 & \$330.19 \\
- & 2-m & -1.62266 & & 2.62266 & & & \$56.34 & \$334.55 \\
- & 6-m & -1.57547 & & & 2.57547 & & \$46.04 & \$356.16 \\
- & 12-m & -1.50287 & & & & 2.50287 & \$46.58 & \$375.04 \\
+ & 1-m & -1.60142 & 2.60142 & & & & \$53.41 & \$322.25 \\
+ & 2-m & -1.59131 & & 2.59131 & & & \$50.95 & \$324.58 \\
+ & 6-m & -1.55475 & & & 2.55475 & & \$43.04 & \$341.84 \\
+ & 12-m & -1.47500 & & & & 2.47500 & \$44.85 & \$345.55 \\
  \cmidrule{2-9}
- & 1-m, 
-2-m & -1.57511 & -10.84619 & 13.42130 & & & \$50.91 & \$352.51 \\
- & 1-m, 6-m & -1.55949 & -1.36860 & & 3.92809 & & \$45.60 & \$363.58 \\
+ & 1-m, 2-m & -1.55169 & -9.49762 & 12.04931 & & & \$46.73 & \$333.20 \\
+ & 1-m, 12-m & -1.51431 & 0.92308 & & & 1.59123 & \$41.51 & \$335.23 \\
 \midrule
 \multirow{6}{*}{3x Leveraged} 
- & 1-m & -4.03993 & 5.03993 & & & & \$188.14 & \$1035.66 \\
- & 2-m & -4.02060 & & 5.02060 & & & \$183.07 & \$1042.01 \\
- & 6-m & -3.92928 & & & 4.92928 & & \$161.06 & \$1076.52 \\
- & 12-m & -3.78922 & & & & 4.78922 & \$147.86 & \$1116.50 \\
+ & 1-m & -3.96148 & 4.96148 & & & & \$175.92 & \$1012.21 \\
+ & 2-m & -3.94307 & & 4.94307 & & & \$171.38 & \$1015.74 \\
+ & 6-m & -3.87794 & & & 4.87794 & & \$153.52 & \$1040.28 \\
+ & 12-m & -3.71788 & & & & 4.71788 & \$143.67 & \$1034.43 \\
  \cmidrule{2-9}
- & 1-m, 2-m & -3.86549 & -35.37385 & 40.23934 & & 
-& \$165.29 & \$1085.27 \\
- & 1-m, 6-m & -3.81478 & -7.16800 & & 11.98279 & & \$149.22 & \$1110.26 \\
+ & 1-m, 2-m & -3.80855 & -32.24870 & 37.05726 & & & \$165.29 & \$1085.27 \\
+ & 1-m, 12-m & -3.70334 & -0.34149 & & & 5.04483 & \$143.53 & \$1037.21 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\textit{Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam.
-Maecenas ligula massa, varius a, semper congue, euismod non, mi.}
+\textit{
+Static replication performs poorly when attempting to track leveraged benchmarks. While in-sample RMSEs are already significantly higher than for the spot benchmark, the out-of-sample RMSEs are extremely large (e.g., \$322.25 for a single 1-month future replicating a 2x benchmark, and \$1012.21 for a 3x benchmark). This demonstrates that a static portfolio of futures cannot capture the path-dependent nature and daily compounding effects inherent in leveraged ETFs, leading to large tracking errors over time.}
 
 \begin{table}[ht]
 \centering
@@ -284,10 +255,6 @@ Maecenas ligula massa, varius a, semper congue, euismod non, mi.}
 \end{tabular}
 \end{table}
 
-\textit{Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam.
-Maecenas ligula massa, varius a, semper congue, euismod non, mi.}
+\textit{The t-statistics far from zero for UGL and GLL indicate that the slopes are statistically significantly different from the specified leverage ratios.}
 
-\vspace{5mm}
-The t-statistics far from zero for UGL and GLL indicate that the slopes are statistically significantly different from the specified leverage ratios.
 \end{document}
