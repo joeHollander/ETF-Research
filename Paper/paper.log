@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.31)  13 OCT 2025 21:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.31)  13 OCT 2025 22:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -192,7 +192,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 {c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
 [2]
-Overfull \hbox (71.52536pt too wide) in paragraph at lines 111--134
+Overfull \hbox (71.52536pt too wide) in paragraph at lines 122--148
  [][] 
  []
 
@@ -203,17 +203,22 @@ Overfull \hbox (71.52536pt too wide) in paragraph at lines 111--134
 ]
 
 [4]
-Overfull \hbox (58.90549pt too wide) in paragraph at lines 167--178
+Overfull \hbox (55.1705pt too wide) in paragraph at lines 187--199
  [][] 
  []
 
 
-Overfull \hbox (92.93362pt too wide) in paragraph at lines 187--198
+Overfull \hbox (92.93362pt too wide) in paragraph at lines 210--222
  [][] 
  []
 
 
-Overfull \hbox (98.30322pt too wide) in paragraph at lines 207--230
+Overfull \hbox (98.30322pt too wide) in paragraph at lines 233--258
+ [][] 
+ []
+
+
+Overfull \hbox (41.51921pt too wide) in paragraph at lines 293--306
  [][] 
  []
 
@@ -223,25 +228,31 @@ Overfull \hbox (98.30322pt too wide) in paragraph at lines 207--230
 
 ]
 
-[6] (./paper.aux)
+[6]
+
+[7] (./paper.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 2274 strings out of 474662
- 34381 string characters out of 5753850
- 441767 words of memory out of 5000000
- 25305 multiletter control sequences out of 15000+600000
- 567156 words of font info for 68 fonts, out of 8000000 for 9000
+ 2278 strings out of 474662
+ 34450 string characters out of 5753850
+ 445767 words of memory out of 5000000
+ 25308 multiletter control sequences out of 15000+600000
+ 567761 words of font info for 70 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 57i,13n,65p,729b,312s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <c:/Users/semic/.texlive2025/texmf-var/fonts/pk/ljfour/jknappen/ec/tcti1000.600pk> <c:/Users/semic/.texlive2025/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on paper.pdf (6 pages, 145777 bytes).
+ 57i,13n,65p,1017b,312s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <c:/Users/semic/.texlive2025/texmf-var/fonts/pk/ljfour/jknappen/ec/tcti1000.600pk> <c:/Users/semic/.texlive2025/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on paper.pdf (7 pages, 159443 bytes).
 PDF statistics:
- 88 PDF objects out of 1000 (max. 8388607)
- 55 compressed objects within 1 object stream
+ 98 PDF objects out of 1000 (max. 8388607)
+ 62 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
