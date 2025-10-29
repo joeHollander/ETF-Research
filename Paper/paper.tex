@@ -13,10 +13,10 @@
 \begin{document}
 \maketitle
 
-\begin{table}[ht]
-\centering
-\caption{New Data: A summary of the regression coefficients and measures of goodness of fit for regressing one-day returns of 1, 2, 6 and 12-month futures on 1-day returns of spot gold.}
-\label{tab:regression_coeffs_new}
+\vspace{2mm}
+\noindent\textbf{New Data: A summary of the regression coefficients and measures of goodness of fit for regressing one-day returns of 1, 2, 6 and 12-month futures on 1-day returns of spot gold.}
+\par\vspace{1mm}
+\begin{center}
 \begin{tabular}{lcccc}
 \toprule
 \textbf{Maturity} & \textbf{Slope} & \textbf{Intercept} & \textbf{$R^2$} & \textbf{RMSE} \\
@@ -27,18 +27,26 @@
 12-Month  & 0.9478 & --- & 0.8399 & --- \\
 \bottomrule
 \end{tabular}
-\end{table}
+\end{center}
 
-\textit{
-The slopes for the 1, 2, and 6-month contracts are all 
-very close to 1, indicating a strong correlation with spot gold returns.
-The 12-month contract, however, has a noticeably lower slope of 0.9478 and a significantly lower $R^2$ of 0.8399.
-This may be a result of the lower liquidity and trading volume of the longer-dated contract, making it less sensitive to daily spot price movements.}
+The slopes for the 1, 2, and 6-month contracts are all very close to 1, 
+indicating a strong correlation with spot gold returns. 
+The 12-month contract, however, has a noticeably lower slope of 0.9478 
+and a significantly lower $R^2$ of 0.8399. 
+This may be a result of the lower liquidity and trading volume of the longer-dated contract, 
+making it less sensitive to daily spot price movements.
 
-\begin{table}[ht]
-\centering
-\caption{Leung \& Ward (2015) Data: Regression coefficients for one-day futures returns on one-day spot gold returns.}
-\label{tab:regression_coeffs_lw}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/1day_spot_vs_1month_futures.pdf}
+    \caption{Scatter plot of one-day returns for spot gold versus 1-month gold futures. The regression slope of 0.9996 demonstrates a near one-to-one relationship.}
+    \label{fig:spot_vs_1m_returns}
+\end{figure}
+
+\vspace{2mm}
+\noindent\textbf{Leung \& Ward (2015) Data: Regression coefficients for one-day futures returns on one-day spot gold returns.}
+\par\vspace{1mm}
+\begin{center}
 \begin{tabular}{lcccc}
 \toprule
 \textbf{Maturity} & \textbf{Slope} & \textbf{Intercept} & \textbf{$R^2$} & \textbf{RMSE} \\
@@ -49,18 +57,23 @@ This may be a result of the lower liquidity and trading volume of the longer-dat
 12-Month  & 0.94358 & $-5.2333 \times 10^{-5}$ & 0.80984 & 0.00529 \\
 \bottomrule
 \end{tabular}
-\end{table}
+\end{center}
 
-\textit{
-The 
-slopes are also very close to 1, but consistently lower than the newer data.
-The $R^2$ values are also significantly lower than the newer data.
-This may be due to the smaller sample size of the older data and lower liquidity.}
+The slopes are also very close to 1, but consistently lower than the newer data. 
+The $R^2$ values are also significantly lower than the newer data. 
+This may be due to the smaller sample size of the older data and lower liquidity.
 
-\begin{table}[ht]
-\centering
-\caption{New Data: Slopes and $R^2$ from the regressions of futures returns versus gold returns over different holding periods.}
-\label{tab:slopes_r2_new}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Images/spot_vs_1m_vs_12m_futures_jan_apr_2024.pdf}
+    \caption{Comparison of closing prices for spot gold, 1-month futures, and 12-month futures in early 2024. The 1-month contract tracks the spot price closely, while the 12-month contract maintains a significant premium (contango).}
+    \label{fig:price_series}
+\end{figure}
+
+\vspace{2mm}
+\noindent\textbf{New Data: Slopes and $R^2$ from the regressions of futures returns versus gold returns over different holding periods.}
+\par\vspace{1mm}
+\begin{center}
 \begin{tabular}{lccccc}
 \toprule
 & \textbf{Days} & \textbf{1-Month} & \textbf{2-Month} & \textbf{6-Month} & \textbf{12-Month} \\
@@ -72,31 +85,34 @@ This may be due to the smaller sample size of the older data and lower liquidity
  & 15 & 1.0031 & 1.0049 & 1.0033 & 0.9920 \\
 \midrule
 \multirow{4}{*}{\textbf{$R^2$}}   
- & 1  & 0.9494 & 0.9471 
-& 0.9407 & 0.8399 \\
+ & 1  & 0.9494 & 0.9471 & 0.9407 & 0.8399 \\
  & 5  & 0.9842 & 0.9840 & 0.9812 & 0.9567 \\
  & 10 & 0.9915 & 0.9910 & 0.9878 & 0.9747 \\
  & 15 & 0.9939 & 0.9933 & 0.9899 & 0.9807 \\
 \bottomrule
 \end{tabular}
+\end{center}
+\vspace{2mm}
+The slopes and $R^2$ values generally increase with longer holding periods but decrease with longer-dated contracts.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Images/slope_by_maturity_and_return_window.pdf}
+    \caption{Regression slope of futures vs. spot returns, analyzed by contract maturity and the return window length in days. For most maturities, the slope approaches 1 as the return window lengthens.}
+    \label{fig:slope_by_maturity}
+\end{figure}
 
 \vspace{2mm}
-\textit{The slopes and $R^2$ values generally increase with longer holding periods but decrease with longer-dated contracts.}
-
-\end{table}
-
-\begin{table}[ht]
-\centering
-\caption{Leung \& Ward (2015) Data: Slopes and $R^2$ from regressions of futures returns vs. gold returns over different holding periods.}
-\label{tab:slopes_r2_lw}
+\noindent\textbf{Leung \& Ward (2015) Data: Slopes and $R^2$ from regressions of futures returns vs. gold returns over different holding periods.}
+\par\vspace{1mm}
+\begin{center}
 \begin{tabular}{lccccc}
 \toprule
 & \textbf{Days} & \textbf{1-Month} & \textbf{2-Month} & \textbf{6-Month} & \textbf{12-Month} \\
 \midrule
 \multirow{4}{*}{\textbf{Slope}} 
  & 1  & 0.94314 & 0.94301 & 0.94348 & 0.94358 \\
- & 5  & 
-0.99805 & 0.99752 & 0.99757 & 0.99715 \\
+ & 5  & 0.99805 & 0.99752 & 0.99757 & 0.99715 \\
  & 10 & 1.01075 & 1.01020 & 1.00970 & 1.00841 \\
  & 15 & 0.99448 & 0.99461 & 0.99431 & 0.99345 \\
 \midrule
@@ -107,165 +123,196 @@ This may be due to the smaller sample size of the older data and lower liquidity
  & 15 & 0.98704 & 0.98691 & 0.98725 & 0.98713 \\
 \bottomrule
 \end{tabular}
-\end{table}
+\end{center}
 
 \clearpage
-The out of sample period is defined as starting on January 1, 2024 and is approximately 10\% of the data.
-The RMSEs are calculated in dollar terms assuming a notional investment of \$1000 in the spot gold price.
-The weights are calculated using a constrained least squares regression that forces the weights to sum to one.
+The out of sample period is defined as starting on January 1, 2024 and is approximately 10\% of the data. 
+The RMSEs are calculated in dollar terms assuming a notional investment of \$1000 in the spot gold price. 
+The weights are calculated using a constrained least squares regression that forces the weights to sum to one. 
 The GLD RMSE is \$6.00 for the out of sample period.
-\begin{table}[ht]
-\centering
-\caption{New Data: Weights and in/out of sample RMSEs for portfolios of 1, 2, 3, and 4 futures contracts.}
-\label{tab:portfolio_weights_extended_new}
+
+\vspace{2mm}
+\noindent\textbf{New Data: Weights and in/out of sample RMSEs for portfolios of 1, 2, 3, and 4 futures contracts.}
+\par\vspace{1mm}
+\begin{center}
 \setlength{\tabcolsep}{4pt} % Reduces space between columns
 \begin{tabular}{lrrrrrrr}
 \toprule
 \textbf{Portfolio} & \textbf{$w_0$} & \textbf{$w_1$} & \textbf{$w_2$} & \textbf{$w_6$} & \textbf{$w_{12}$} & \textbf{RMSE\textsubscript{in}} & \textbf{RMSE\textsubscript{out}} \\
 \midrule
-1-m & 0.00256 & 0.99743 & & & & \$2.65 & \$5.15 \\
-2-m & 0.00676 & & 0.99324 & & & \$3.67 & \$5.75 \\
-12-m & 0.04509 & & & & 0.95491 & \$18.84 & \$17.95 \\
+1-m & 0.00256 & 0.99743 & --- & --- & --- & \$2.65 & \$5.15 \\
+2-m & 0.00676 & --- & 0.99324 & --- & --- & \$3.67 & \$5.75 \\
+12-m & 0.04509 & --- & --- & --- & 0.95491 & \$18.84 & \$17.95 \\
 \midrule
-1-m, 2-m & 0.00168 & 1.21224 & -0.21393 & & & \$2.61 & 
-\$5.06 \\
-1-m, 6-m & 0.00165 & 1.04753 & & -0.04918 & & \$2.61 & 
-\$4.88 \\
-1-m, 12-m & 0.00189 & 1.01446 & & & -0.01635 & \$2.66 & \$4.95 \\
-2-m, 6-m & 0.00330 & & 1.23075 & -0.23405 & & \$3.18 & \$4.63 \\
-2-m, 12-m & 0.00310 & & 1.09461 & & -0.09770 & \$3.26 & \$4.99 \\
-6-m, 12-m & 0.00446 & & & 1.76090 & -0.76537 & \$6.07 & \$12.15 \\
+1-m, 2-m & 0.00168 & 1.21224 & -0.21393 & --- & --- & \$2.61 & \$5.06 \\
+1-m, 6-m & 0.00165 & 1.04753 & --- & -0.04918 & --- & \$2.61 & \$4.88 \\
+1-m, 12-m & 0.00189 & 1.01446 & --- & --- & -0.01635 & \$2.66 & \$4.95 \\
+2-m, 6-m & 0.00330 & --- & 1.23075 & -0.23405 & --- & \$3.18 & \$4.63 \\
+2-m, 12-m & 0.00310 & --- & 1.09461 & --- & -0.09770 & \$3.26 & \$4.99 \\
+6-m, 12-m & 0.00446 & --- & --- & 1.76090 & -0.76537 & \$6.07 & \$12.15 \\
 \midrule
-1-m, 2-m, 6-m & 0.00156 & 1.14088 & -0.11333 & -0.02911 & & \$2.60 & \$4.94 \\
-1-m, 2-m, 12-m & 0.00170 & 1.23840 & -0.24373 & & 0.00363 & \$2.64 & \$4.99 \\
-1-m, 6-m, 12-m & 0.00197 & 1.10522 & & -0.17107 & 
-0.06388 & \$2.62 & \$4.54 \\
-2-m, 6-m, 12-m & 0.00327 & & 1.22084 & -0.21809 & -0.00602 & \$3.21 & \$4.46 \\
+1-m, 2-m, 6-m & 0.00156 & 1.14088 & -0.11333 & -0.02911 & --- & \$2.60 & \$4.94 \\
+1-m, 2-m, 12-m & 0.00170 & 1.23840 & -0.24373 & --- & 0.00363 & \$2.64 & \$4.99 \\
+1-m, 6-m, 12-m & 0.00197 & 1.10522 & --- & -0.17107 & 0.06388 & \$2.62 & \$4.54 \\
+2-m, 6-m, 12-m & 0.00327 & --- & 1.22084 & -0.21809 & -0.00602 & \$3.21 & \$4.46 \\
 \midrule
 1-m, 2-m, 6-m, 12-m & 0.00186 & 1.21485 & -0.13541 & -0.14322 & 0.06191 & \$2.62 & \$4.62 \\
 \bottomrule
 \end{tabular}
-\end{table}
+\end{center}
 
-\textit{
-The results show that using a single futures contract provides a reasonable replication, but performance diminishes as the maturity of the contract increases (out-of-sample RMSE rises from \$5.15 to \$17.95).
-Adding a second futures contract generally improves the out-of-sample RMSE, with the 2-month and 6-month combination performing best at \$4.63.
-The best-performing portfolio overall is the three-contract combination of 2-month, 6-month, and 12-month futures, which achieved an out-of-sample RMSE of \$4.46.
-Notably, several of these futures portfolios outperform the GLD ETF, which has an out-of-sample RMSE of \$6.00 over the same period.}
+The results show that using a single futures contract provides a reasonable replication, 
+but performance diminishes as the maturity of the contract increases (out-of-sample RMSE rises from \$5.15 to \$17.95). 
+Adding a second futures contract generally improves the out-of-sample RMSE, 
+with the 2-month and 6-month combination performing best at \$4.63. 
+The best-performing portfolio overall is the three-contract combination of 2-month, 6-month, and 12-month futures, 
+which achieved an out-of-sample RMSE of \$4.46. 
+Notably, several of these futures portfolios outperform the GLD ETF, 
+which has an out-of-sample RMSE of \$6.00 over the same period.
 
-\begin{table}[ht]
-\centering
-\caption{Leung \& Ward (2015) Data: Weights and in/out of sample RMSEs for portfolios of 1 and 2 futures contracts.}
-\label{tab:portfolio_weights_lw}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{Images/futures_portfolio_replication_vs_gld.pdf}
+    \caption{Visual comparison of tracking performance in early 2024. The top panel shows replication of spot gold using futures portfolios, while the bottom panel shows the GLD ETF's tracking of spot gold. The futures portfolios achieve a lower RMSE in this period than GLD.}
+    \label{fig:replication_vs_gld}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{Images/OOS_RMSE_and_Volatility.pdf}
+    \caption{Out-of-sample RMSE for various futures portfolios across different cross-validation training periods. The pink bars represent the spot price volatility during each out-of-sample period. Tracking error tends to be higher in periods of higher market volatility, such as 2020 and post-2022.}
+    \label{fig:rmse_and_vol}
+\end{figure}
+
+\vspace{2mm}
+\noindent\textbf{Leung \& Ward (2015) Data: Weights and in/out of sample RMSEs for portfolios of 1 and 2 futures contracts.}
+\par\vspace{1mm}
+\begin{center}
 \begin{tabular}{lrrrrr}
 \toprule
 \textbf{Portfolio} & \textbf{$w_0$} & \textbf{$w_{short}$} & \textbf{$w_{long}$} & \textbf{RMSE\textsubscript{in}} & \textbf{RMSE\textsubscript{out}} \\
 \midrule
-1-m & -0.01071 & 1.01071 & & \$6.63 & \$3.34 \\
-2-m & -0.04835 & 1.04835 & & \$12.22 & \$6.12 \\
-12-m & -0.06842 & 1.06842 & & \$15.11 & \$5.71 \\
+1-m & -0.01071 & 1.01071 & --- & \$6.63 & \$3.34 \\
+2-m & -0.04835 & 1.04835 & --- & \$12.22 & \$6.12 \\
+12-m & -0.06842 & 1.06842 & --- & \$15.11 & \$5.71 \\
 \midrule
 1-m, 2-m & -0.00088 & 1.27315 & -0.27227 & \$6.27 & \$2.79 \\
-1-m, 6-m & -0.00171 & 1.23899 & -0.23729 & 
-\$6.27 & \$2.98 \\
+1-m, 6-m & -0.00171 & 1.23899 & -0.23729 & \$6.27 & \$2.98 \\
 1-m, 12-m & -0.00021 & 1.19336 & -0.19315 & \$6.29 & \$3.00 \\
 2-m, 6-m & -0.04079 & 5.06602 & -4.02523 & \$10.27 & \$9.37 \\
 \bottomrule
 \end{tabular}
-\end{table}
+\end{center}
 
-\textit{Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam.
-Maecenas ligula massa, varius a, semper congue, euismod non, mi.}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. 
+Cras elementum ultrices diam. 
+Maecenas ligula massa, varius a, semper congue, euismod non, mi.
 
 \clearpage
 
-\begin{table}[ht]
-\centering
-\caption{New Data: Regression coefficients for one-day returns of (L)ETFs versus spot gold.}
-\label{tab:my_regression_results_reordered_new}
+\vspace{2mm}
+\noindent\textbf{New Data: Regression coefficients for one-day returns of (L)ETFs versus spot gold.}
+\par\vspace{1mm}
+\begin{center}
 \begin{tabular}{lccccccc}
 \toprule
 \textbf{(L)ETF} & \textbf{Leverage ($\beta$)} & \textbf{Slope} & \textbf{Intercept} & \textbf{t-stat} & \textbf{p-value} & \textbf{$R^2$} & \textbf{RMSE} \\
 \midrule
-GLD & 1 & 1.0033 & 4.09e-06 & 1.440 & 0.150 & 0.9740 & 0.00178 \\
-UGL & 2 & 2.0209 & -1.95e-04 & 2.777 & 0.006 & 0.9644 & 0.00349 \\
-GLL & -2 & -2.0143 & 1.89e-04 & -1.923 & 0.055 & 0.9650 & 0.00345 \\
-DGLD & -2 & -1.9756 & -8.49e-05 & 0.468 & 0.640 & 0.4066 & 0.02098 \\
-UGLDF & 3 & 
-3.0063 & 4.59e-04 & 0.058 & 0.954 & 0.2552 & 0.04463 \\
+GLD & 1 & 1.0033 & $4.09 \times 10^{-6}$ & 1.440 & 0.150 & 0.9740 & 0.00178 \\
+UGL & 2 & 2.0209 & $-1.95 \times 10^{-4}$ & 2.777 & 0.006 & 0.9644 & 0.00349 \\
+GLL & -2 & -2.0143 & $1.89 \times 10^{-4}$ & -1.923 & 0.055 & 0.9650 & 0.00345 \\
+DGLD & -2 & -1.9756 & $-8.49 \times 10^{-5}$ & 0.468 & 0.640 & 0.4066 & 0.02098 \\
+UGLDF & 3 & 3.0063 & $4.59 \times 10^{-4}$ & 0.058 & 0.954 & 0.2552 & 0.04463 \\
 \bottomrule
 \end{tabular}
-\end{table}
+\end{center}
 
-\textit{
-The regression results indicate that GLD, UGL, and GLL are effective at tracking their underlying benchmarks, with high $R^2$ values and slopes very close to their target betas.
-The p-value for GLD (0.150) shows its slope is not statistically different from 1. However, the p-values for UGL (0.006) and GLL (0.055) suggest their slopes are statistically different from their target betas of 2 and -2, respectively.
-DGLD and UGLDF perform poorly, with very low $R^2$ values (0.4066 and 0.2552), indicating they do not reliably track their leveraged benchmarks.}
+The regression results indicate that GLD, UGL, and GLL are effective at tracking their underlying benchmarks, 
+with high $R^2$ values and slopes very close to their target betas. 
+The p-value for GLD (0.150) shows its slope is not statistically different from 1. 
+However, the p-values for UGL (0.006) and GLL (0.055) suggest their slopes are statistically different 
+from their target betas of 2 and -2, respectively. 
+DGLD and UGLDF perform poorly, with very low $R^2$ values (0.4066 and 0.2552), 
+indicating they do not reliably track their leveraged benchmarks.
 
-\begin{table}[ht]
-\centering
-\caption{Leung \& Ward (2015) Data: Regression coefficients for one-day returns of (L)ETFs versus spot gold.}
-\label{tab:my_regression_results_reordered_lw}
+\vspace{2mm}
+\noindent\textbf{Leung \& Ward (2015) Data: Regression coefficients for one-day returns of (L)ETFs versus spot gold.}
+\par\vspace{1mm}
+\begin{center}
 \begin{tabular}{lccccccc}
 \toprule
 \textbf{(L)ETF} & \textbf{Leverage ($\beta$)}  & \textbf{Slope} & \textbf{Intercept} & \textbf{t-stat} & \textbf{p-value} & \textbf{$R^2$} & \textbf{RMSE} \\
 \midrule
 GLD & 1 & 1.00540 & $-1.6427 \times 10^{-6}$ & 1.42692 & 0.15382 & 0.98060 & 0.00163 \\
 UGL & 2 &  2.00572 & $-1.3107 \times 10^{-4}$ & 0.73319 & 0.46357 & 0.97930 & 0.00337 \\
-GLL & -2 & -2.00556 & $-1.0550 \times 10^{-4}$ & 0.67089 & 0.50240 
-& 0.97673 & 0.00358 \\
+GLL & -2 & -2.00556 & $-1.0550 \times 10^{-4}$ & 0.67089 & 0.50240 & 0.97673 & 0.00358 \\
 UGLD & 3 & 2.99358 & $-1.9860 \times 10^{-4}$ & 0.45211 & 0.65133 & 0.98484 & 0.00421 \\
 DGLD & -3 & -2.97528 & $-1.6912 \times 10^{-5}$ & 0.97442 & 0.33019 & 0.95256 & 0.00752 \\
 \bottomrule
 \end{tabular}
-\end{table}
+\end{center}
 
-\textit{Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam.
-Maecenas ligula massa, varius a, semper congue, euismod non, mi.}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. 
+Cras elementum ultrices diam. 
+Maecenas ligula massa, varius a, semper congue, euismod non, mi.
 
-\begin{table}[ht]
-\centering
-\caption{New Data: Weights and in/out of sample RMSEs for portfolios replicating leveraged benchmarks.}
-\label{tab:leveraged_replication_new}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{Images/rebased_leverage_benchmark.pdf}
+    \caption{Performance of spot gold versus a 2x leveraged benchmark from 2020 to 2023, with both series indexed to 100. This illustrates the compounding effect (volatility drag) over long periods, where the leveraged product's return is not simply double the spot return.}
+    \label{fig:rebased_leverage}
+\end{figure}
+
+\vspace{2mm}
+\noindent\textbf{New Data: Weights and in/out of sample RMSEs for portfolios replicating leveraged benchmarks.}
+\par\vspace{1mm}
+\begin{center}
 \setlength{\tabcolsep}{4pt}
 \begin{tabular}{llrrrrrrr}
 \toprule
 \textbf{Benchmark} & \textbf{Portfolio} & \textbf{$w_0$} & \textbf{$w_1$} & \textbf{$w_2$} & \textbf{$w_6$} & \textbf{$w_{12}$} & \textbf{RMSE\textsubscript{in}} & \textbf{RMSE\textsubscript{out}} \\
 \midrule
 \multirow{6}{*}{2x Leveraged} 
- & 1-m & -1.59664 & 2.59797 & & & & \$53.36 & \$322.86 \\
- & 2-m & -1.58673 & & 2.58801 & & & \$50.91 & \$325.15 \\
- & 6-m & -1.54780 & & & 2.54977 & & \$42.93 & \$342.68 \\
- & 12-m & -1.47123 & & & & 2.47233 & \$44.81 & \$345.98 \\
+ & 1-m & -1.59664 & 2.59797 & --- & --- & --- & \$53.36 & \$322.86 \\
+ & 2-m & -1.58673 & --- & 2.58801 & --- & --- & \$50.91 & \$325.15 \\
+ & 6-m & -1.54780 & --- & --- & 2.54977 & --- & \$42.93 & \$342.68 \\
+ & 12-m & -1.47123 & --- & --- & --- & 2.47233 & \$44.81 & \$345.98 \\
  \cmidrule{2-9}
- & 1-m, 
-2-m & -1.54673 & -9.50324 & 12.05135 & & & \$46.67 & \$333.81 \\
- & 1-m, 12-m & -1.51211 & 0.92136 & & & 1.59137 & \$41.50 & \$335.50 \\
+ & 1-m, 2-m & -1.54673 & -9.50324 & 12.05135 & --- & --- & \$46.67 & \$333.81 \\
+ & 1-m, 12-m & -1.51211 & 0.92136 & --- & --- & 1.59137 & \$41.50 & \$335.50 \\
 \midrule
 \multirow{6}{*}{3x Leveraged} 
- & 1-m & -3.96685 & 4.96535 & & & & \$175.90 & \$1011.78 \\
- & 2-m & -3.94914 & & 4.94744 & & & \$171.36 & \$1015.26 \\
- & 6-m & -3.88232 & & & 4.88107 & & \$153.51 & \$1039.95 \\
- & 12-m & -3.72756 & & & & 4.72473 & \$143.57 & \$1033.75 \\
+ & 1-m & -3.96685 & 4.96535 & --- & --- & --- & \$175.90 & \$1011.78 \\
+ & 2-m & -3.94914 & --- & 4.94744 & --- & --- & \$171.36 & \$1015.26 \\
+ & 6-m & -3.88232 & --- & --- & 4.88107 & --- & \$153.51 & \$1039.95 \\
+ & 12-m & -3.72756 & --- & --- & --- & 4.72473 & \$143.57 & \$1033.75 \\
  \cmidrule{2-9}
- & 1-m, 2-m & -3.81349 & -32.24312 & 37.05523 & & 
-& \$156.89 & \$1038.14 \\
- & 1-m, 12-m & -3.71268 & -0.33417 & & & 5.04421 & \$143.45 & \$1036.52 \\
+ & 1-m, 2-m & -3.81349 & -32.24312 & 37.05523 & --- & --- & \$156.89 & \$1038.14 \\
+ & 1-m, 12-m & -3.71268 & -0.33417 & --- & --- & 5.04421 & \$143.45 & \$1036.52 \\
 \bottomrule
 \end{tabular}
-\end{table}
+\end{center}
 
-\textit{
-Static replication performs poorly when attempting to track leveraged benchmarks.
-While in-sample RMSEs are already significantly higher than for the spot benchmark, the out-of-sample RMSEs are extremely large (e.g., \$322.86 for a single 1-month future replicating a 2x benchmark, and \$1011.78 for a 3x benchmark).
-This demonstrates that a static portfolio of futures cannot capture the path-dependent nature and daily compounding effects inherent in leveraged ETFs, leading to large tracking errors over time.}
+Static replication performs poorly when attempting to track leveraged benchmarks. 
+While in-sample RMSEs are already significantly higher than for the spot benchmark, 
+the out-of-sample RMSEs are extremely large (e.g., \$322.86 for a single 1-month future replicating a 2x benchmark, 
+and \$1011.78 for a 3x benchmark). 
+This demonstrates that a static portfolio of futures cannot capture the path-dependent nature 
+and daily compounding effects inherent in leveraged ETFs, leading to large tracking errors over time.
 
-\begin{table}[ht]
-\centering
-\caption{Leung \& Ward (2015) Data: RMSEs for portfolios replicating leveraged benchmarks.}
-\label{tab:leveraged_replication_lw}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\textwidth]{Images/OOSrmse_enddate_leverage_b2.pdf}
+    \caption{Out-of-sample RMSE for various futures portfolios attempting to replicate a 2x leveraged benchmark across different cross-validation folds. The tracking error is consistently high across all time periods, though it varies with market conditions.}
+    \label{fig:rmse_leverage}
+\end{figure}
+
+\vspace{2mm}
+\noindent\textbf{Leung \& Ward (2015) Data: RMSEs for portfolios replicating leveraged benchmarks.}
+\par\vspace{1mm}
+\begin{center}
 \begin{tabular}{llcc}
 \toprule
 \textbf{Benchmark} & \textbf{Portfolio} & \textbf{RMSE\textsubscript{in}} & \textbf{RMSE\textsubscript{out}} \\
@@ -283,13 +330,14 @@ This demonstrates that a static portfolio of futures cannot capture the path-dep
 & 12-m & \$518.97 & \$123.83 \\
 \bottomrule
 \end{tabular}
-\end{table}
+\end{center}
 
 \section{Dynamic Replication}
-\begin{table}[ht]
-\centering
-\caption{Out-of-sample RMSE for dynamically replicated portfolios versus the actual (L)ETF's tracking error.}
-\label{tab:dynamic_replication_rmse}
+
+\vspace{2mm}
+\noindent\textbf{Out-of-sample RMSE for dynamically replicated portfolios versus the actual (L)ETF's tracking error.}
+\par\vspace{1mm}
+\begin{center}
 \begin{tabular}{lrrrrr}
 \toprule
 \multirow{2}{*}{\textbf{(L)ETF}} & \multicolumn{4}{c}{\textbf{Replicated RMSE by Futures Maturity}} & \multirow{2}{*}{\textbf{Actual ETF RMSE}} \\
@@ -303,9 +351,17 @@ DGLD & \$805.47 & \$805.11 & \$809.21 & \$773.20 & \$896.73 \\
 UGLDF & \$669.66 & \$644.20 & \$669.53 & \$1196.78 & \$198.11 \\
 \bottomrule
 \end{tabular}
-\end{table}
+\end{center}
 
-\textit{
-The performance of dynamic replication, which involves daily rebalancing of a single futures contract, varies significantly across different (L)ETFs. For positively leveraged ETFs like UGL (2x) and UGLDF (3x), as well as the 1x GLD, the dynamic replication strategy results in a substantially higher tracking error (RMSE) than the actual ETFs. In contrast, for the negatively leveraged GLL (-2x), the replicated portfolio's RMSE is very close to that of the ETF itself. Notably, for DGLD (-2x), the dynamically replicated portfolios, particularly the one using the 12-month future, achieve a lower RMSE (\$773.20) than the actual ETF (\$896.73), indicating a superior tracking performance by the model in this specific case. This suggests that while the dynamic replication model is a useful theoretical framework, its practical effectiveness depends heavily on the specific characteristics and tracking efficiency of the target (L)ETF.}
+The performance of dynamic replication, which involves daily rebalancing of a single futures contract, 
+varies significantly across different (L)ETFs. 
+For positively leveraged ETFs like UGL (2x) and UGLDF (3x), as well as the 1x GLD, 
+the dynamic replication strategy results in a substantially higher tracking error (RMSE) than the actual ETFs. 
+In contrast, for the negatively leveraged GLL (-2x), the replicated portfolio's RMSE is very close to that of the ETF itself. 
+Notably, for DGLD (-2x), the dynamically replicated portfolios, particularly the one using the 12-month future, 
+achieve a lower RMSE (\$773.20) than the actual ETF (\$896.73), 
+indicating a superior tracking performance by the model in this specific case. 
+This suggests that while the dynamic replication model is a useful theoretical framework, 
+its practical effectiveness depends heavily on the specific characteristics and tracking efficiency of the target (L)ETF.
 
 \end{document}
