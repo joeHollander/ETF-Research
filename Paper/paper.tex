@@ -5,6 +5,7 @@
 \usepackage{booktabs} 
 \usepackage{multirow} 
 \usepackage{amsmath}  
+\usepackage{float}
 
 \title{Gold Future/ETF Analysis}
 \author{Joe Hollander}
@@ -297,4 +298,182 @@ This suggests that these products employ a more sophisticated strategy than simp
 Conversely, for the inverse ETF DGLD (-2x), the dynamic replication RMSEs 
 (e.g., \$805.47 for 1-month) are lower than the ETF's actual RMSE (\$896.73), 
 implying that a simple dynamic strategy could have outperformed the product's own tracking.
+
+\section{Dynamic Replication}
+
+Table \ref{tab:letf_benchmark_rmse} displays the tracking error (RMSE) of the actual LETFs against the theoretical leveraged benchmark. This establishes the baseline tracking error inherent in the ETF product itself before comparing it to our replication strategies.
+
+\begin{table}[h!]
+\centering
+\caption{LETF vs. Leveraged Benchmark RMSE}
+\label{tab:letf_benchmark_rmse}
+\begin{tabular}{lcc}
+\toprule
+\textbf{ETF} & \textbf{Beta} & \textbf{RMSE (LETF vs Benchmark)} \\
+\midrule
+GLD   & 1  & \$55.79 \\
+UGL   & 2  & \$176.72 \\
+GLL   & -2 & \$1094.66 \\
+DGLD  & -3 & \$896.73 \\
+UGLDF & 3  & \$198.11 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Table \ref{tab:dynamic_rmse} summarizes the Root Mean Squared Error (RMSE) for our dynamic replication strategies across different futures maturities.
+
+\begin{table}[h!]
+\centering
+\caption{Dynamic Replication RMSE by Futures Maturity (Replicated Portfolio vs Benchmark)}
+\label{tab:dynamic_rmse}
+\begin{tabular}{lccccc}
+\toprule
+\textbf{ETF Target} & \textbf{Beta} & \textbf{1-Month} & \textbf{2-Month} & \textbf{6-Month} & \textbf{12-Month} \\
+\midrule
+GLD   & 1  & \$113.96 & \$118.20 & \$119.39 & \$288.40 \\
+UGL   & 2  & \$439.63 & \$425.96 & \$395.99 & \$567.73 \\
+GLL   & -2 & \$121.88 & \$123.16 & \$127.15 & \$105.97 \\
+DGLD  & -3 & \$128.28 & \$129.43 & \$133.21 & \$100.79 \\
+UGLDF & 3  & \$720.58 & \$740.78 & \$718.59 & \$529.40 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\newpage
+\section{Dynamic Replication Plots}
+
+The following figures illustrate the dynamic replication performance across different futures maturities (1, 2, 6, and 12 months). Each figure displays a 2x2 grid for a specific ETF strategy, allowing for a detailed comparison of maturity effects.
+
+% --- GLD (Beta 1) Square Grid ---
+\begin{figure}[H]
+    \centering
+    % Row 1: 1m and 2m
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Images/dynamic_letf_replication_maturity_1,_beta_1.pdf}
+        \centerline{\footnotesize 1-Month}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Images/dynamic_letf_replication_maturity_2,_beta_1.pdf}
+        \centerline{\footnotesize 2-Month}
+    \end{minipage}
+    
+    \vspace{1em} % Vertical space between rows
+    
+    % Row 2: 6m and 12m
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Images/dynamic_letf_replication_maturity_6,_beta_1.pdf}
+        \centerline{\footnotesize 6-Month}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Images/dynamic_letf_replication_maturity_12,_beta_1.pdf}
+        \centerline{\footnotesize 12-Month}
+    \end{minipage}
+    
+    \caption{\textbf{GLD (1x) Replication}: Comparison across maturities. Short-term contracts (1m, 2m) track closely, while the 12-month contract shows significant divergence.}
+    \label{fig:gld_replication_grid}
+\end{figure}
+
+% --- UGL (Beta 2) Square Grid ---
+\begin{figure}[H]
+    \centering
+    % Row 1: 1m and 2m
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Images/dynamic_letf_replication_maturity_1,_beta_2.pdf}
+        \centerline{\footnotesize 1-Month}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Images/dynamic_letf_replication_maturity_2,_beta_2.pdf}
+        \centerline{\footnotesize 2-Month}
+    \end{minipage}
+    
+    \vspace{1em}
+    
+    % Row 2: 6m and 12m
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Images/dynamic_letf_replication_maturity_6,_beta_2.pdf}
+        \centerline{\footnotesize 6-Month}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Images/dynamic_letf_replication_maturity_12,_beta_2.pdf}
+        \centerline{\footnotesize 12-Month}
+    \end{minipage}
+    
+    \caption{\textbf{UGL (2x) Replication}: Performance decreases as maturity increases. The 12-month contract fails to capture the necessary volatility for 2x leverage.}
+    \label{fig:ugl_replication_grid}
+\end{figure}
+
+% --- GLL (Beta -2) Square Grid ---
+\begin{figure}[H]
+    \centering
+    % Row 1: 1m and 2m
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Images/dynamic_letf_replication_maturity_1,_beta_-2.pdf}
+        \centerline{\footnotesize 1-Month}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Images/dynamic_letf_replication_maturity_2,_beta_-2.pdf}
+        \centerline{\footnotesize 2-Month}
+    \end{minipage}
+    
+    \vspace{1em}
+    
+    % Row 2: 6m and 12m
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Images/dynamic_letf_replication_maturity_6,_beta_-2.pdf}
+        \centerline{\footnotesize 6-Month}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Images/dynamic_letf_replication_maturity_12,_beta_-2.pdf}
+        \centerline{\footnotesize 12-Month}
+    \end{minipage}
+    
+    \caption{\textbf{GLL (-2x) Replication}: Inverse exposure shows consistent tracking for short maturities but large errors at 12-month maturity.}
+    \label{fig:gll_replication_grid}
+\end{figure}
+
+% --- UGLDF (Beta 3) Square Grid ---
+\begin{figure}[H]
+    \centering
+    % Row 1: 1m and 2m
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Images/dynamic_letf_replication_maturity_1,_beta_3.pdf}
+        \centerline{\footnotesize 1-Month}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Images/dynamic_letf_replication_maturity_2,_beta_3.pdf}
+        \centerline{\footnotesize 2-Month}
+    \end{minipage}
+    
+    \vspace{1em}
+    
+    % Row 2: 6m and 12m
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Images/dynamic_letf_replication_maturity_6,_beta_3.pdf}
+        \centerline{\footnotesize 6-Month}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Images/dynamic_letf_replication_maturity_12,_beta_3.pdf}
+        \centerline{\footnotesize 12-Month}
+    \end{minipage}
+    
+    \caption{\textbf{UGLDF (3x) Replication}: Comparison across maturities. The higher leverage (3x) amplifies the divergence errors, particularly in the longer-dated contracts.}
+    \label{fig:ugldf_replication_grid}
+\end{figure}
+
 \end{document}
