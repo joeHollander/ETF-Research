@@ -257,9 +257,7 @@ DGLD and UGLDF perform poorly, with very low $R^2$ values (0.4156 and 0.2501), i
 GLD & \phantom{-}1 & \phantom{-}1.00540 & $-1.6427 \times 10^{-6}$ & \phantom{-}1.42692 & 0.15382 & 0.98060 & 0.00163 \\
 UGL & \phantom{-}2 & \phantom{-}2.00572 & $-1.3107 \times 10^{-4}$ & \phantom{-}0.73319 & 0.46351 & 0.96257 & 0.00350 \\
 GLL & -2 & -2.00609 & \phantom{$-$}$1.2541 \times 10^{-4}$ & -0.76019 & 0.44723 & 0.96317 & 0.00346 \\
-DGLD & -2 & -1.97934 & $-2.0543 \times 10^{-4}$ & \phantom{-}0.40822 & 0.68316 & 0.43577 & 0.02026 \\
-UGLDF & 
-\phantom{-}3 & \phantom{-}3.01189 & $-1.9048 \times 10^{-4}$ & \phantom{-}0.11181 & 0.91099 & 0.28014 & 0.04369 \\
+UGLDF & \phantom{-}3 & \phantom{-}3.01189 & $-1.9048 \times 10^{-4}$ & \phantom{-}0.11181 & 0.91099 & 0.28014 & 0.04369 \\
 \bottomrule
 \end{tabular}
 \caption{Leung \& Ward (2015) Data: Regression coefficients for one-day returns of (L)ETFs versus spot gold.}
@@ -267,37 +265,37 @@ UGLDF &
 \end{table}
 
 
-\begin{table}[h!]
-\centering
-\begin{tabular}{lccccc}
-\toprule
-& \multicolumn{4}{c}{\textbf{$\text{RMSE}_{\text{diff}}$}} & \multirow{2}{*}{\textbf{Actual ETF RMSE}} \\
-\cmidrule{2-5}
- & \textbf{1-Month} & \textbf{2-Month} & \textbf{6-Month} & \textbf{12-Month} & \\
-\midrule
-GLD & \$113.94 & \$117.11 & \$120.92 & \$288.55 & \$55.79 \\
-UGL & \$816.20 & \$825.18 & \$861.66 & \$907.40 & \$176.72 \\
-GLL & \$1120.26 & \$1120.72 & \$1124.66 & \$1050.30 & \$1094.66 \\
-DGLD & \$805.47 & \$805.11 & \$809.21 & \$773.20 & \$896.73 \\
-UGDF & \$669.66 & \$644.20 & \$669.53 & \$1196.78 & \$198.11 \\
-\bottomrule
-\end{tabular}
-\caption{New Data: Dynamic replication one-day return differences ($\text{RMSE}_{\text{diff}}$) and (L)ETF RMSEs.}
-\label{tab:new_data_dynamic_rep}
-\end{table}
+% \begin{table}[h!]
+% \centering
+% \begin{tabular}{lccccc}
+% \toprule
+% & \multicolumn{4}{c}{\textbf{$\text{RMSE}_{\text{diff}}$}} & \multirow{2}{*}{\textbf{Actual ETF RMSE}} \\
+% \cmidrule{2-5}
+%  & \textbf{1-Month} & \textbf{2-Month} & \textbf{6-Month} & \textbf{12-Month} & \\
+% \midrule
+% GLD & \$113.94 & \$117.11 & \$120.92 & \$288.55 & \$55.79 \\
+% UGL & \$816.20 & \$825.18 & \$861.66 & \$907.40 & \$176.72 \\
+% GLL & \$1120.26 & \$1120.72 & \$1124.66 & \$1050.30 & \$1094.66 \\
+% DGLD & \$805.47 & \$805.11 & \$809.21 & \$773.20 & \$896.73 \\
+% UGDF & \$669.66 & \$644.20 & \$669.53 & \$1196.78 & \$198.11 \\
+% \bottomrule
+% \end{tabular}
+% \caption{New Data: Dynamic replication one-day return differences ($\text{RMSE}_{\text{diff}}$) and (L)ETF RMSEs.}
+% \label{tab:new_data_dynamic_rep}
+% \end{table}
 
-The performance of dynamic 
-replication, which involves daily rebalancing of a single futures contract, 
-varies significantly across different (L)ETFs.
-For positively leveraged ETFs like UGL (2x) and UGLDF (3x), as well as the 
-inverse ETF GLL (-2x), the $\text{RMSE}_{\text{diff}}$ for dynamic replication 
-is substantially higher than the actual tracking error (Actual ETF RMSE) of the products themselves.
-For instance, the best dynamic replication for UGL (1-month contract) has an RMSE difference of \$816.20, 
-whereas the ETF's actual RMSE is only \$176.72.
-This suggests that these products employ a more sophisticated strategy than simple daily rebalancing of a single futures contract.
-Conversely, for the inverse ETF DGLD (-2x), the dynamic replication RMSEs 
-(e.g., \$805.47 for 1-month) are lower than the ETF's actual RMSE (\$896.73), 
-implying that a simple dynamic strategy could have outperformed the product's own tracking.
+% The performance of dynamic 
+% replication, which involves daily rebalancing of a single futures contract, 
+% varies significantly across different (L)ETFs.
+% For positively leveraged ETFs like UGL (2x) and UGLDF (3x), as well as the 
+% inverse ETF GLL (-2x), the $\text{RMSE}_{\text{diff}}$ for dynamic replication 
+% is substantially higher than the actual tracking error (Actual ETF RMSE) of the products themselves.
+% For instance, the best dynamic replication for UGL (1-month contract) has an RMSE difference of \$816.20, 
+% whereas the ETF's actual RMSE is only \$176.72.
+% This suggests that these products employ a more sophisticated strategy than simple daily rebalancing of a single futures contract.
+% Conversely, for the inverse ETF DGLD (-2x), the dynamic replication RMSEs 
+% (e.g., \$805.47 for 1-month) are lower than the ETF's actual RMSE (\$896.73), 
+% implying that a simple dynamic strategy could have outperformed the product's own tracking.
 
 \section{Dynamic Replication}
 
@@ -311,11 +309,10 @@ Table \ref{tab:letf_benchmark_rmse} displays the tracking error (RMSE) of the ac
 \toprule
 \textbf{ETF} & \textbf{Beta} & \textbf{RMSE (LETF vs Benchmark)} \\
 \midrule
-GLD   & 1  & \$55.79 \\
-UGL   & 2  & \$176.72 \\
-GLL   & -2 & \$1094.66 \\
-DGLD  & -3 & \$896.73 \\
-UGLDF & 3  & \$198.11 \\
+GLD   & 1  & \$54.78 \\
+UGL   & 2  & \$1119.09 \\
+GLL   & -2 & \$101.39 \\
+UGLDF & 3  & \$1375.81 \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -342,7 +339,9 @@ UGLDF & 3  & \$720.58 & \$740.78 & \$718.59 & \$529.40 \\
 \newpage
 \section{Dynamic Replication Plots}
 
-The following figures illustrate the dynamic replication performance across different futures maturities (1, 2, 6, and 12 months). Each figure displays a 2x2 grid for a specific ETF strategy, allowing for a detailed comparison of maturity effects.
+The following figures illustrate the dynamic replication performance across different futures maturities (1, 2, 6, and 12 months). Each figure displays a 2x2 grid for a specific ETF. 
+It should be noted that the time periods shown in the plots differ between each beta, 
+so the RMSE value are not directly comparable across the different ETFs.
 
 % --- GLD (Beta 1) Square Grid ---
 \begin{figure}[H]
@@ -373,7 +372,7 @@ The following figures illustrate the dynamic replication performance across diff
         \centerline{\footnotesize 12-Month}
     \end{minipage}
     
-    \caption{\textbf{GLD (1x) Replication}: Comparison across maturities. Short-term contracts (1m, 2m) track closely, while the 12-month contract shows significant divergence.}
+    \caption{\textbf{GLD (1x) Replication}: The GLD ETF performs better than the replicated portfolios, but the shorter-term maturities (1m, 2m, and 6m) show reasonable performance.}
     \label{fig:gld_replication_grid}
 \end{figure}
 
@@ -406,7 +405,8 @@ The following figures illustrate the dynamic replication performance across diff
         \centerline{\footnotesize 12-Month}
     \end{minipage}
     
-    \caption{\textbf{UGL (2x) Replication}: Performance decreases as maturity increases. The 12-month contract fails to capture the necessary volatility for 2x leverage.}
+    \caption{\textbf{UGL (2x) Replication}: The replicated portfolios exhibit significantly greater performance than the leveraged ETF. 
+    Once again, the 12m maturity performs worse than all others.}
     \label{fig:ugl_replication_grid}
 \end{figure}
 
@@ -439,7 +439,7 @@ The following figures illustrate the dynamic replication performance across diff
         \centerline{\footnotesize 12-Month}
     \end{minipage}
     
-    \caption{\textbf{GLL (-2x) Replication}: Inverse exposure shows consistent tracking for short maturities but large errors at 12-month maturity.}
+    \caption{\textbf{GLL (-2x) Replication}: Better performance for all replicated portfolios compared to the leveraged ETF, but the 12m maturity seems less reactive to spot.}
     \label{fig:gll_replication_grid}
 \end{figure}
 
@@ -472,7 +472,7 @@ The following figures illustrate the dynamic replication performance across diff
         \centerline{\footnotesize 12-Month}
     \end{minipage}
     
-    \caption{\textbf{UGLDF (3x) Replication}: Comparison across maturities. The higher leverage (3x) amplifies the divergence errors, particularly in the longer-dated contracts.}
+    \caption{\textbf{UGLDF (3x) Replication}: All replicated portfolios performed better than the LETF. The higher leverage (3x) amplifies the divergence errors, particularly in the longer-dated contracts.}
     \label{fig:ugldf_replication_grid}
 \end{figure}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.3)  25 NOV 2025 14:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.3)  25 NOV 2025 20:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -265,12 +265,7 @@ Overfull \hbox (72.5319pt too wide) in paragraph at lines 231--243
  []
 
 
-Overfull \hbox (96.26695pt too wide) in paragraph at lines 253--265
- [][] 
- []
-
-
-Overfull \hbox (32.3806pt too wide) in paragraph at lines 272--285
+Overfull \hbox (96.26695pt too wide) in paragraph at lines 253--263
  [][] 
  []
 
@@ -284,42 +279,42 @@ Overfull \hbox (32.3806pt too wide) in paragraph at lines 272--285
 <Images/dynamic_letf_replication_maturity_1,_beta_1.pdf, id=274, 289.08pt x 289.08pt>
 File: Images/dynamic_letf_replication_maturity_1,_beta_1.pdf Graphic file (type pdf)
 <use Images/dynamic_letf_replication_maturity_1,_beta_1.pdf>
-Package pdftex.def Info: Images/dynamic_letf_replication_maturity_1,_beta_1.pdf  used on input line 353.
+Package pdftex.def Info: Images/dynamic_letf_replication_maturity_1,_beta_1.pdf  used on input line 352.
 (pdftex.def)             Requested size: 165.59853pt x 165.59775pt.
 <Images/dynamic_letf_replication_maturity_2,_beta_1.pdf, id=275, 289.08pt x 289.08pt>
 File: Images/dynamic_letf_replication_maturity_2,_beta_1.pdf Graphic file (type pdf)
 <use Images/dynamic_letf_replication_maturity_2,_beta_1.pdf>
-Package pdftex.def Info: Images/dynamic_letf_replication_maturity_2,_beta_1.pdf  used on input line 358.
+Package pdftex.def Info: Images/dynamic_letf_replication_maturity_2,_beta_1.pdf  used on input line 357.
 (pdftex.def)             Requested size: 165.59853pt x 165.59775pt.
 <Images/dynamic_letf_replication_maturity_6,_beta_1.pdf, id=276, 289.08pt x 289.08pt>
 File: Images/dynamic_letf_replication_maturity_6,_beta_1.pdf Graphic file (type pdf)
 <use Images/dynamic_letf_replication_maturity_6,_beta_1.pdf>
-Package pdftex.def Info: Images/dynamic_letf_replication_maturity_6,_beta_1.pdf  used on input line 367.
+Package pdftex.def Info: Images/dynamic_letf_replication_maturity_6,_beta_1.pdf  used on input line 366.
 (pdftex.def)             Requested size: 165.59853pt x 165.59775pt.
 <Images/dynamic_letf_replication_maturity_12,_beta_1.pdf, id=277, 289.08pt x 289.08pt>
 File: Images/dynamic_letf_replication_maturity_12,_beta_1.pdf Graphic file (type pdf)
 <use Images/dynamic_letf_replication_maturity_12,_beta_1.pdf>
-Package pdftex.def Info: Images/dynamic_letf_replication_maturity_12,_beta_1.pdf  used on input line 372.
+Package pdftex.def Info: Images/dynamic_letf_replication_maturity_12,_beta_1.pdf  used on input line 371.
 (pdftex.def)             Requested size: 165.59853pt x 165.59775pt.
 <Images/dynamic_letf_replication_maturity_1,_beta_2.pdf, id=278, 289.08pt x 289.08pt>
 File: Images/dynamic_letf_replication_maturity_1,_beta_2.pdf Graphic file (type pdf)
 <use Images/dynamic_letf_replication_maturity_1,_beta_2.pdf>
-Package pdftex.def Info: Images/dynamic_letf_replication_maturity_1,_beta_2.pdf  used on input line 386.
+Package pdftex.def Info: Images/dynamic_letf_replication_maturity_1,_beta_2.pdf  used on input line 385.
 (pdftex.def)             Requested size: 165.59853pt x 165.59775pt.
 <Images/dynamic_letf_replication_maturity_2,_beta_2.pdf, id=279, 289.08pt x 289.08pt>
 File: Images/dynamic_letf_replication_maturity_2,_beta_2.pdf Graphic file (type pdf)
 <use Images/dynamic_letf_replication_maturity_2,_beta_2.pdf>
-Package pdftex.def Info: Images/dynamic_letf_replication_maturity_2,_beta_2.pdf  used on input line 391.
+Package pdftex.def Info: Images/dynamic_letf_replication_maturity_2,_beta_2.pdf  used on input line 390.
 (pdftex.def)             Requested size: 165.59853pt x 165.59775pt.
 <Images/dynamic_letf_replication_maturity_6,_beta_2.pdf, id=280, 289.08pt x 289.08pt>
 File: Images/dynamic_letf_replication_maturity_6,_beta_2.pdf Graphic file (type pdf)
 <use Images/dynamic_letf_replication_maturity_6,_beta_2.pdf>
-Package pdftex.def Info: Images/dynamic_letf_replication_maturity_6,_beta_2.pdf  used on input line 400.
+Package pdftex.def Info: Images/dynamic_letf_replication_maturity_6,_beta_2.pdf  used on input line 399.
 (pdftex.def)             Requested size: 165.59853pt x 165.59775pt.
 <Images/dynamic_letf_replication_maturity_12,_beta_2.pdf, id=281, 289.08pt x 289.08pt>
 File: Images/dynamic_letf_replication_maturity_12,_beta_2.pdf Graphic file (type pdf)
 <use Images/dynamic_letf_replication_maturity_12,_beta_2.pdf>
-Package pdftex.def Info: Images/dynamic_letf_replication_maturity_12,_beta_2.pdf  used on input line 405.
+Package pdftex.def Info: Images/dynamic_letf_replication_maturity_12,_beta_2.pdf  used on input line 404.
 (pdftex.def)             Requested size: 165.59853pt x 165.59775pt.
 
 
@@ -376,23 +371,19 @@ Package pdftex.def Info: Images/dynamic_letf_replication_maturity_12,_beta_3.pdf
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-07-20>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 2505 strings out of 475495
- 44852 string characters out of 5776743
+ 2502 strings out of 475495
+ 44807 string characters out of 5776743
  1945960 words of memory out of 5000000
- 25144 multiletter control sequences out of 15000+600000
- 566579 words of font info for 69 fonts, out of 8000000 for 9000
+ 25142 multiletter control sequences out of 15000+600000
+ 566270 words of font info for 68 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 57i,13n,65p,468b,322s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,12n,65p,468b,304s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <c:/Users/hollanderj/.texlive2024/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on paper.pdf (13 pages, 1222400 bytes).
+Output written on paper.pdf (13 pages, 1267936 bytes).
 PDF statistics:
- 1083 PDF objects out of 1200 (max. 8388607)
+ 1084 PDF objects out of 1200 (max. 8388607)
  176 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  106 words of extra memory for PDF output out of 10000 (max. 10000000)
