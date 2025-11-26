@@ -14,6 +14,11 @@
 \begin{document}
 \maketitle
 
+\section{Spot and Futures Analysis}
+
+It should be noted that all analyses, apart from those with train versus test groups, are performed on the full dataset available.
+Often this differs between analyses due to data availability and differing sizes in the intersections of different datasets.
+
 \begin{table}[h!]
 \centering
 \begin{tabular}{lcccc}
@@ -38,7 +43,7 @@ The 12-month contract, however, has a noticeably lower slope of 0.94779
 and a significantly lower $R^2$ of 0.83986.
 This may be a result of the lower liquidity and trading volume of the longer-dated contract, 
 making it less sensitive to daily spot price movements.
-The great differnce in all statistics, though,
+The great difference in all statistics, though,
 could also indicate that the data for the 12-month contract data could be corrupted, recorded incorrectly, or otherwise flawed.
 
 \begin{table}[h!]
@@ -140,7 +145,9 @@ but the 12-month contract is still significantly different from 1 compared to th
 \end{table}
 
 \clearpage
-The out of sample period is defined as starting on January 1, 2024 and is approximately 10\% of the data.
+\section{Spot Static Replication}
+
+The out-of-sample period is defined as starting on January 1, 2024 and is approximately 10\% of the data.
 The RMSEs are calculated in dollar terms assuming a notional investment of \$1000 in the spot gold price.
 The weights are calculated using a constrained least squares regression that forces the weights to sum to one.
 
@@ -171,7 +178,7 @@ The weights are calculated using a constrained least squares regression that for
 1-m, 2-m, 6-m, 12-m & \phantom{-}0.00190 & \phantom{-}1.22259 & -0.14302 & -0.14612 & \phantom{-}0.06465 & \$2.63 & \$4.60 \\
 \bottomrule
 \end{tabular}
-\caption{New Data: Weights and in/out of sample RMSEs for portfolios of 1, 2, 3, and 4 futures contracts.}
+\caption{New Data: Weights and in/out-of-sample RMSEs for portfolios of 1, 2, 3, and 4 futures contracts.}
 \label{tab:new_data_rmse}
 \end{table}
 
@@ -216,15 +223,12 @@ The pink bars represent the spot price volatility during each out-of-sample peri
 2-m, 6-m & -0.04079 & \phantom{-}5.06602 & -4.02523 & \$10.27 & \$9.37 \\
 \bottomrule
 \end{tabular}
-\caption{Leung \& Ward (2015) Data: Weights and in/out of sample RMSEs for portfolios of 1 and 2 futures contracts.}
+\caption{Leung \& Ward (2015) Data: Weights and in/out-of-sample RMSEs for portfolios of 1 and 2 futures contracts.}
 \label{tab:leung_ward_rmse}
 \end{table}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. 
-Cras elementum ultrices diam.
-Maecenas ligula massa, varius a, semper congue, euismod non, mi.
 \clearpage
+\section{Leveraged ETFs analysis}
 
 \begin{table}[h!]
 \centering
@@ -235,7 +239,6 @@ Maecenas ligula massa, varius a, semper congue, euismod non, mi.
 GLD & \phantom{-}1 & \phantom{-}1.00431 & $-1.30 \times 10^{-5}$ & \phantom{-}2.039 & 0.042 & 0.9780 & 0.00164 \\
 UGL & \phantom{-}2 & \phantom{-}2.01860 & $-2.10 \times 10^{-4}$ & \phantom{-}2.615 & 0.009 & 0.9688 & 0.00326 \\
 GLL & -2 & -2.01174 & \phantom{$-$}$1.96 \times 10^{-4}$ & -1.663 & 0.097 & 0.9690 & 0.00323 \\
-DGLD & -2 & -1.97424 & \phantom{$-$}$9.85 \times 10^{-5}$ & \phantom{-}0.499 & 0.618 & 0.4156 & 0.02058 \\
 UGLDF & \phantom{-}3 & \phantom{-}3.00291 
 & \phantom{$-$}$4.25 \times 10^{-4}$ & \phantom{-}0.026 & 0.979 & 0.2501 & 0.04519 \\
 \bottomrule
@@ -244,9 +247,28 @@ UGLDF & \phantom{-}3 & \phantom{-}3.00291
 \label{tab:new_data_etf_coeffs}
 \end{table}
 
+\begin{table}[H]
+\centering
+\caption{Daily Return Differential Between LETF and Spot (Bias) Analysis: $H_0: \text{Mean Bias} = 0$}
+\label{tab:tracking_bias}
+\begin{tabular}{lccc}
+\toprule
+\textbf{ETF} & \textbf{Mean Daily Bias} & \textbf{t-stat} & \textbf{p-value} \\
+\midrule
+GLD   & -0.000011 & -0.5668 & 0.570828 \\
+UGL   & -0.000202 & -5.0935 & 0.000000 \\
+GLL   & 0.000190  & 4.8491  & 0.000001 \\
+UGLDF & 0.000426  & 0.7767  & 0.437311 \\
+\bottomrule
+\multicolumn{4}{l}{\footnotesize}
+\end{tabular}
+\end{table}
+
 The regression results indicate that GLD, UGL, and GLL are effective at tracking their underlying benchmarks, with high $R^2$ values and slopes very close to their target betas.
 However, the low p-values for GLD (0.042) and UGL (0.009) suggest that their slopes are statistically different from the target betas of 1 and -1, respectively. 
-DGLD and UGLDF perform poorly, with very low $R^2$ values (0.4156 and 0.2501), indicating they do not reliably track their leveraged benchmarks.
+UGLDF performs poorly, with very low $R^2$ values (0.2501), indicating they do not reliably track their leveraged benchmarks.
+The daily return differential analysis shows that UGL and GLL have statistically significant biases,
+while GLD and UGLDF do not.
 
 \begin{table}[h!]
 \centering
@@ -262,6 +284,49 @@ UGLDF & \phantom{-}3 & \phantom{-}3.01189 & $-1.9048 \times 10^{-4}$ & \phantom{
 \end{tabular}
 \caption{Leung \& Ward (2015) Data: Regression coefficients for one-day returns of (L)ETFs versus spot gold.}
 \label{tab:leung_ward_etf_coeffs}
+\end{table}
+
+\section{Leveraged ETFs Static Replication}
+
+Table below presents the optimal weights and RMSE metrics for static replication of leveraged positions using single futures contracts.
+The the future maturities that weren't used were not able to converge to a solution.
+Clearly, static replication of leveraged ETFs is ineffective and infeasible, and even moreso for inverse leveraged ETFs.
+The large out-of-sample RMSE values could also be attributed to the high volatility in the out-of-sample period.
+The general ineffectiveness does make sense given the path-dependent nature of leveraged ETFs, 
+which cannot be captured by a static portfolio.
+
+\begin{table}[H]
+\centering
+\caption{Static Replication for Leveraged Targets: Optimal Weights and RMSE}
+\label{tab:leverage_static}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{Target Leverage} & \textbf{Contract} & \textbf{$w_{\text{cash}}$} & \textbf{$w_{\text{future}}$} & \textbf{RMSE (In)} & \textbf{RMSE (Out)} \\
+\midrule
+\multirow{4}{*}{\textbf{-3x (DGLD)}} 
+ & c1  & 2.75 & -1.75 & \$89.90 & \$9,096.48 \\
+ & c2  & 2.75 & -1.75 & \$89.56 & \$9,814.67 \\
+ & c6  & 2.72 & -1.72 & \$90.25 & \$16,591.13 \\
+ & c12 & 2.64 & -1.64 & \$94.38 & \$51,040.18 \\
+\midrule
+\textbf{-2x (GLL)} 
+ & c12 & 2.29 & -1.29 & \$56.11 & \$2,371.02 \\
+\midrule
+\multirow{4}{*}{\textbf{2x (UGL)}} 
+ & c1  & -1.60 & 2.60 & \$52.68 & \$312.98 \\
+ & c2  & -1.59 & 2.59 & \$50.26 & \$315.26 \\
+ & c6  & -1.55 & 2.55 & \$42.54 & \$332.02 \\
+ & c12 & -1.47 & 2.47 & \$44.60 & \$332.71 \\
+\midrule
+\multirow{4}{*}{\textbf{3x (UGLDF)}} 
+ & c1  & -3.95 & 4.95 & \$174.51 & \$979.96 \\
+ & c2  & -3.93 & 4.93 & \$170.04 & \$983.41 \\
+ & c6  & -3.87 & 4.87 & \$152.43 & \$1,007.18 \\
+ & c12 & -3.71 & 4.71 & \$143.10 & \$991.18 \\
+\bottomrule
+\end{tabular}%
+}
 \end{table}
 
 
@@ -330,11 +395,15 @@ Table \ref{tab:dynamic_rmse} summarizes the Root Mean Squared Error (RMSE) for o
 GLD   & 1  & \$113.96 & \$118.20 & \$119.39 & \$288.40 \\
 UGL   & 2  & \$439.63 & \$425.96 & \$395.99 & \$567.73 \\
 GLL   & -2 & \$121.88 & \$123.16 & \$127.15 & \$105.97 \\
-DGLD  & -3 & \$128.28 & \$129.43 & \$133.21 & \$100.79 \\
 UGLDF & 3  & \$720.58 & \$740.78 & \$718.59 & \$529.40 \\
 \bottomrule
 \end{tabular}
 \end{table}
+
+The results indicate that the the dynamic replication strategy exhibits better performance that UGL and UGLDF across all futures maturities,
+comparable performance to the GLL ETF, and slightly worse performance than the GLD ETF.
+The extremely good performance of the GLD ETF could be attributed to its high volume and AUM, enhancing its liquidity and tracking accuracy.
+
 
 \newpage
 \section{Dynamic Replication Plots}
