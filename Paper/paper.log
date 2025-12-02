@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.3)  26 NOV 2025 13:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.3)  2 DEC 2025 13:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -251,14 +251,6 @@ Package pdftex.def Info: Images/futures_portfolio_replication_vs_gld.pdf  used o
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Images/OOS_RMSE_and_Volatility.pdf, id=147, 1011.78pt x 578.16pt>
-File: Images/OOS_RMSE_and_Volatility.pdf Graphic file (type pdf)
-<use Images/OOS_RMSE_and_Volatility.pdf>
-Package pdftex.def Info: Images/OOS_RMSE_and_Volatility.pdf  used on input line 203.
-(pdftex.def)             Requested size: 345.0pt x 197.14522pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -269,8 +261,6 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 ]
 
 [6 <./Images/futures_portfolio_replication_vs_gld.pdf>]
-
-[7 <./Images/OOS_RMSE_and_Volatility.pdf>]
 Overfull \hbox (72.5319pt too wide) in paragraph at lines 235--246
  [][] 
  []
@@ -282,122 +272,122 @@ Overfull \hbox (96.26695pt too wide) in paragraph at lines 275--285
 
 
 
-[8
+[7
 
 ]
 
-[9]
+[8]
 
-[10]
-<Images/dynamic_letf_replication_maturity_1,_beta_1.pdf, id=277, 289.08pt x 289.08pt>
+[9]
+<Images/dynamic_letf_replication_maturity_1,_beta_1.pdf, id=218, 289.08pt x 289.08pt>
 File: Images/dynamic_letf_replication_maturity_1,_beta_1.pdf Graphic file (type pdf)
 <use Images/dynamic_letf_replication_maturity_1,_beta_1.pdf>
 Package pdftex.def Info: Images/dynamic_letf_replication_maturity_1,_beta_1.pdf  used on input line 421.
 (pdftex.def)             Requested size: 165.59853pt x 165.59775pt.
-<Images/dynamic_letf_replication_maturity_2,_beta_1.pdf, id=278, 289.08pt x 289.08pt>
+<Images/dynamic_letf_replication_maturity_2,_beta_1.pdf, id=219, 289.08pt x 289.08pt>
 File: Images/dynamic_letf_replication_maturity_2,_beta_1.pdf Graphic file (type pdf)
 <use Images/dynamic_letf_replication_maturity_2,_beta_1.pdf>
 Package pdftex.def Info: Images/dynamic_letf_replication_maturity_2,_beta_1.pdf  used on input line 426.
 (pdftex.def)             Requested size: 165.59853pt x 165.59775pt.
-<Images/dynamic_letf_replication_maturity_6,_beta_1.pdf, id=279, 289.08pt x 289.08pt>
+<Images/dynamic_letf_replication_maturity_6,_beta_1.pdf, id=220, 289.08pt x 289.08pt>
 File: Images/dynamic_letf_replication_maturity_6,_beta_1.pdf Graphic file (type pdf)
 <use Images/dynamic_letf_replication_maturity_6,_beta_1.pdf>
 Package pdftex.def Info: Images/dynamic_letf_replication_maturity_6,_beta_1.pdf  used on input line 435.
 (pdftex.def)             Requested size: 165.59853pt x 165.59775pt.
-<Images/dynamic_letf_replication_maturity_12,_beta_1.pdf, id=280, 289.08pt x 289.08pt>
+<Images/dynamic_letf_replication_maturity_12,_beta_1.pdf, id=221, 289.08pt x 289.08pt>
 File: Images/dynamic_letf_replication_maturity_12,_beta_1.pdf Graphic file (type pdf)
 <use Images/dynamic_letf_replication_maturity_12,_beta_1.pdf>
 Package pdftex.def Info: Images/dynamic_letf_replication_maturity_12,_beta_1.pdf  used on input line 440.
 (pdftex.def)             Requested size: 165.59853pt x 165.59775pt.
-<Images/dynamic_letf_replication_maturity_1,_beta_2.pdf, id=281, 289.08pt x 289.08pt>
+<Images/dynamic_letf_replication_maturity_1,_beta_2.pdf, id=222, 289.08pt x 289.08pt>
 File: Images/dynamic_letf_replication_maturity_1,_beta_2.pdf Graphic file (type pdf)
 <use Images/dynamic_letf_replication_maturity_1,_beta_2.pdf>
 Package pdftex.def Info: Images/dynamic_letf_replication_maturity_1,_beta_2.pdf  used on input line 454.
 (pdftex.def)             Requested size: 165.59853pt x 165.59775pt.
-<Images/dynamic_letf_replication_maturity_2,_beta_2.pdf, id=282, 289.08pt x 289.08pt>
+<Images/dynamic_letf_replication_maturity_2,_beta_2.pdf, id=223, 289.08pt x 289.08pt>
 File: Images/dynamic_letf_replication_maturity_2,_beta_2.pdf Graphic file (type pdf)
 <use Images/dynamic_letf_replication_maturity_2,_beta_2.pdf>
 Package pdftex.def Info: Images/dynamic_letf_replication_maturity_2,_beta_2.pdf  used on input line 459.
 (pdftex.def)             Requested size: 165.59853pt x 165.59775pt.
-<Images/dynamic_letf_replication_maturity_6,_beta_2.pdf, id=283, 289.08pt x 289.08pt>
+<Images/dynamic_letf_replication_maturity_6,_beta_2.pdf, id=224, 289.08pt x 289.08pt>
 File: Images/dynamic_letf_replication_maturity_6,_beta_2.pdf Graphic file (type pdf)
 <use Images/dynamic_letf_replication_maturity_6,_beta_2.pdf>
 Package pdftex.def Info: Images/dynamic_letf_replication_maturity_6,_beta_2.pdf  used on input line 468.
 (pdftex.def)             Requested size: 165.59853pt x 165.59775pt.
-<Images/dynamic_letf_replication_maturity_12,_beta_2.pdf, id=284, 289.08pt x 289.08pt>
+<Images/dynamic_letf_replication_maturity_12,_beta_2.pdf, id=225, 289.08pt x 289.08pt>
 File: Images/dynamic_letf_replication_maturity_12,_beta_2.pdf Graphic file (type pdf)
 <use Images/dynamic_letf_replication_maturity_12,_beta_2.pdf>
 Package pdftex.def Info: Images/dynamic_letf_replication_maturity_12,_beta_2.pdf  used on input line 473.
 (pdftex.def)             Requested size: 165.59853pt x 165.59775pt.
 
 
-[11 <./Images/dynamic_letf_replication_maturity_1,_beta_1.pdf> <./Images/dynamic_letf_replication_maturity_2,_beta_1.pdf> <./Images/dynamic_letf_replication_maturity_6,_beta_1.pdf> <./Images/dynamic_letf_replication_maturity_12,_beta_1.pdf>]
-<Images/dynamic_letf_replication_maturity_1,_beta_-2.pdf, id=470, 289.08pt x 289.08pt>
+[10 <./Images/dynamic_letf_replication_maturity_1,_beta_1.pdf> <./Images/dynamic_letf_replication_maturity_2,_beta_1.pdf> <./Images/dynamic_letf_replication_maturity_6,_beta_1.pdf> <./Images/dynamic_letf_replication_maturity_12,_beta_1.pdf>]
+<Images/dynamic_letf_replication_maturity_1,_beta_-2.pdf, id=411, 289.08pt x 289.08pt>
 File: Images/dynamic_letf_replication_maturity_1,_beta_-2.pdf Graphic file (type pdf)
 <use Images/dynamic_letf_replication_maturity_1,_beta_-2.pdf>
 Package pdftex.def Info: Images/dynamic_letf_replication_maturity_1,_beta_-2.pdf  used on input line 488.
 (pdftex.def)             Requested size: 165.59853pt x 165.59775pt.
-<Images/dynamic_letf_replication_maturity_2,_beta_-2.pdf, id=471, 289.08pt x 289.08pt>
+<Images/dynamic_letf_replication_maturity_2,_beta_-2.pdf, id=412, 289.08pt x 289.08pt>
 File: Images/dynamic_letf_replication_maturity_2,_beta_-2.pdf Graphic file (type pdf)
 <use Images/dynamic_letf_replication_maturity_2,_beta_-2.pdf>
 Package pdftex.def Info: Images/dynamic_letf_replication_maturity_2,_beta_-2.pdf  used on input line 493.
 (pdftex.def)             Requested size: 165.59853pt x 165.59775pt.
-<Images/dynamic_letf_replication_maturity_6,_beta_-2.pdf, id=472, 289.08pt x 289.08pt>
+<Images/dynamic_letf_replication_maturity_6,_beta_-2.pdf, id=413, 289.08pt x 289.08pt>
 File: Images/dynamic_letf_replication_maturity_6,_beta_-2.pdf Graphic file (type pdf)
 <use Images/dynamic_letf_replication_maturity_6,_beta_-2.pdf>
 Package pdftex.def Info: Images/dynamic_letf_replication_maturity_6,_beta_-2.pdf  used on input line 502.
 (pdftex.def)             Requested size: 165.59853pt x 165.59775pt.
-<Images/dynamic_letf_replication_maturity_12,_beta_-2.pdf, id=473, 289.08pt x 289.08pt>
+<Images/dynamic_letf_replication_maturity_12,_beta_-2.pdf, id=414, 289.08pt x 289.08pt>
 File: Images/dynamic_letf_replication_maturity_12,_beta_-2.pdf Graphic file (type pdf)
 <use Images/dynamic_letf_replication_maturity_12,_beta_-2.pdf>
 Package pdftex.def Info: Images/dynamic_letf_replication_maturity_12,_beta_-2.pdf  used on input line 507.
 (pdftex.def)             Requested size: 165.59853pt x 165.59775pt.
 
 
-[12 <./Images/dynamic_letf_replication_maturity_1,_beta_2.pdf> <./Images/dynamic_letf_replication_maturity_2,_beta_2.pdf> <./Images/dynamic_letf_replication_maturity_6,_beta_2.pdf> <./Images/dynamic_letf_replication_maturity_12,_beta_2.pdf>]
-<Images/dynamic_letf_replication_maturity_1,_beta_3.pdf, id=656, 289.08pt x 289.08pt>
+[11 <./Images/dynamic_letf_replication_maturity_1,_beta_2.pdf> <./Images/dynamic_letf_replication_maturity_2,_beta_2.pdf> <./Images/dynamic_letf_replication_maturity_6,_beta_2.pdf> <./Images/dynamic_letf_replication_maturity_12,_beta_2.pdf>]
+<Images/dynamic_letf_replication_maturity_1,_beta_3.pdf, id=597, 289.08pt x 289.08pt>
 File: Images/dynamic_letf_replication_maturity_1,_beta_3.pdf Graphic file (type pdf)
 <use Images/dynamic_letf_replication_maturity_1,_beta_3.pdf>
 Package pdftex.def Info: Images/dynamic_letf_replication_maturity_1,_beta_3.pdf  used on input line 521.
 (pdftex.def)             Requested size: 165.59853pt x 165.59775pt.
-<Images/dynamic_letf_replication_maturity_2,_beta_3.pdf, id=657, 289.08pt x 289.08pt>
+<Images/dynamic_letf_replication_maturity_2,_beta_3.pdf, id=598, 289.08pt x 289.08pt>
 File: Images/dynamic_letf_replication_maturity_2,_beta_3.pdf Graphic file (type pdf)
 <use Images/dynamic_letf_replication_maturity_2,_beta_3.pdf>
 Package pdftex.def Info: Images/dynamic_letf_replication_maturity_2,_beta_3.pdf  used on input line 526.
 (pdftex.def)             Requested size: 165.59853pt x 165.59775pt.
-<Images/dynamic_letf_replication_maturity_6,_beta_3.pdf, id=658, 289.08pt x 289.08pt>
+<Images/dynamic_letf_replication_maturity_6,_beta_3.pdf, id=599, 289.08pt x 289.08pt>
 File: Images/dynamic_letf_replication_maturity_6,_beta_3.pdf Graphic file (type pdf)
 <use Images/dynamic_letf_replication_maturity_6,_beta_3.pdf>
 Package pdftex.def Info: Images/dynamic_letf_replication_maturity_6,_beta_3.pdf  used on input line 535.
 (pdftex.def)             Requested size: 165.59853pt x 165.59775pt.
-<Images/dynamic_letf_replication_maturity_12,_beta_3.pdf, id=659, 289.08pt x 289.08pt>
+<Images/dynamic_letf_replication_maturity_12,_beta_3.pdf, id=600, 289.08pt x 289.08pt>
 File: Images/dynamic_letf_replication_maturity_12,_beta_3.pdf Graphic file (type pdf)
 <use Images/dynamic_letf_replication_maturity_12,_beta_3.pdf>
 Package pdftex.def Info: Images/dynamic_letf_replication_maturity_12,_beta_3.pdf  used on input line 540.
 (pdftex.def)             Requested size: 165.59853pt x 165.59775pt.
 
 
-[13 <./Images/dynamic_letf_replication_maturity_1,_beta_-2.pdf> <./Images/dynamic_letf_replication_maturity_2,_beta_-2.pdf> <./Images/dynamic_letf_replication_maturity_6,_beta_-2.pdf> <./Images/dynamic_letf_replication_maturity_12,_beta_-2.pdf>]
+[12 <./Images/dynamic_letf_replication_maturity_1,_beta_-2.pdf> <./Images/dynamic_letf_replication_maturity_2,_beta_-2.pdf> <./Images/dynamic_letf_replication_maturity_6,_beta_-2.pdf> <./Images/dynamic_letf_replication_maturity_12,_beta_-2.pdf>]
 
-[14 <./Images/dynamic_letf_replication_maturity_1,_beta_3.pdf> <./Images/dynamic_letf_replication_maturity_2,_beta_3.pdf> <./Images/dynamic_letf_replication_maturity_6,_beta_3.pdf> <./Images/dynamic_letf_replication_maturity_12,_beta_3.pdf>] (./paper.aux)
+[13 <./Images/dynamic_letf_replication_maturity_1,_beta_3.pdf> <./Images/dynamic_letf_replication_maturity_2,_beta_3.pdf> <./Images/dynamic_letf_replication_maturity_6,_beta_3.pdf> <./Images/dynamic_letf_replication_maturity_12,_beta_3.pdf>] (./paper.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-07-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 2507 strings out of 475495
- 44875 string characters out of 5776743
- 1945960 words of memory out of 5000000
- 25146 multiletter control sequences out of 15000+600000
+ 2499 strings out of 475495
+ 44547 string characters out of 5776743
+ 1944960 words of memory out of 5000000
+ 25138 multiletter control sequences out of 15000+600000
  566579 words of font info for 69 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  57i,14n,65p,468b,326s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <c:/Users/hollanderj/.texlive2024/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on paper.pdf (14 pages, 1275432 bytes).
+Output written on paper.pdf (13 pages, 1258438 bytes).
 PDF statistics:
- 1087 PDF objects out of 1200 (max. 8388607)
- 178 compressed objects within 2 object streams
+ 1028 PDF objects out of 1200 (max. 8388607)
+ 171 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 106 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 101 words of extra memory for PDF output out of 10000 (max. 10000000)
 
